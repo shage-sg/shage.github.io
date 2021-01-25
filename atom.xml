@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>啵啵</title>
-  <icon>http://bulingling.top/icon.png</icon>
+  <icon>https://bulingling.top/icon.png</icon>
   <subtitle>每日一言</subtitle>
-  <link href="http://bulingling.top/atom.xml" rel="self"/>
+  <link href="https://bulingling.top/atom.xml" rel="self"/>
   
-  <link href="http://bulingling.top/"/>
+  <link href="https://bulingling.top/"/>
   <updated>2021-01-21T15:06:33.634Z</updated>
-  <id>http://bulingling.top/</id>
+  <id>https://bulingling.top/</id>
   
   <author>
     <name>bobo</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://bulingling.top/posts/16107.html"/>
-    <id>http://bulingling.top/posts/16107.html</id>
+    <link href="https://bulingling.top/posts/16107.html"/>
+    <id>https://bulingling.top/posts/16107.html</id>
     <published>2021-01-18T05:44:11.875Z</published>
     <updated>2021-01-21T15:06:33.634Z</updated>
     
