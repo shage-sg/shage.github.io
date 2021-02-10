@@ -9,6 +9,13 @@
   </url>
   
   <url>
+    <loc>https://bulingling.top/posts/4d081371.html</loc>
+    
+    <lastmod>2021-02-10</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://bulingling.top/categories/index.html</loc>
     
     <lastmod>2021-01-22</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://bulingling.top/artitalk/index.html</loc>
     
     <lastmod>2021-01-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://bulingling.top/posts/16107.html</loc>
-    
-    <lastmod>2021-01-21</lastmod>
     
   </url>
   
@@ -94,10 +94,24 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://bulingling.top/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2021-02-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
     <loc>https://bulingling.top/categories/%E7%BC%93%E5%AD%98%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2021-02-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bulingling.top/categories/python%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2021-02-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

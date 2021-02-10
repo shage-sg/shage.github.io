@@ -4,7 +4,32 @@
   
     
     <entry>
-      <title>缓存穿透、缓存击穿、缓存雪崩区别和解决办法</title>
+      <title>冒泡排序算法</title>
+      <link href="posts/4d081371.html"/>
+      <url>posts/4d081371.html</url>
+      
+        <content type="html"><![CDATA[<h1><span id="python冒泡排序算法">Python冒泡排序算法</span></h1><h2><span id="一-冒泡排序算法的基本思想">一  . 冒泡排序算法的基本思想</span></h2><ol><li> 列表每两个相邻的数，如果前面的比后边的数大，则交换这两个数。</li><li>一趟排序完成之后，则无序区减少一个数，有序区增加一个数。（无序区是为完成排序的数，有序区是已经完成排序的数。）</li></ol><hr><h2><span id="二-代码关键点">二  . 代码关键点</span></h2><ol><li>趟数的概念</li><li>无序区的范围的变化</li></ol><hr><h2><span id="三-实现代码">三  . 实现代码</span></h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">bubble_sort</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token operator">-</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>            <span class="token keyword">if</span> li<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&gt;</span> li<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>                li<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> li<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> li<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> li<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>代码解释：</p><ul><li>li是需要排序的列表。</li><li>第一层for循环一共需要遍历多少趟来回，因为最后只剩一个数时，不需要再遍历，则len(li) - 1。</li><li>第二层for循环时一共需要多少趟相邻数据比较，例如：长度为五的列表（下标从零开始）第零趟无序区的数的个数为零，则需要执行四趟，因为第四个数是和第五个数进行比较，比较完成时，最大值已经出现，就不需要再比较。</li><li>列表交换数据。</li></ul><h2><span id="四-时间复杂度">四 . 时间复杂度</span></h2><p>​    因为两层for循环，所以时间复杂度是O(n<sup>2</sup>)</p><h2><span id="五-性能优化">五 . 性能优化</span></h2><p>​    如果冒泡排序中的一趟排序没有发生交换，则说明列表已经有序，则可以直接结束算法。</p><h3><span id="解决思路">解决思路：</span></h3><p>​    可以通过使用标志位解决。</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">bubble_sort</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token comment"># 最后一次只剩一个数时不用排序</span>    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment"># 第i趟</span>        exchange <span class="token operator">=</span> <span class="token boolean">False</span>        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span> <span class="token operator">-</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>            <span class="token keyword">if</span> li<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&gt;</span> li<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>                li<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> li<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> li<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>li<span class="token punctuation">[</span>j<span class="token punctuation">]</span>                exchange <span class="token operator">=</span> <span class="token boolean">True</span>        <span class="token keyword">if</span> <span class="token keyword">not</span> exchange<span class="token punctuation">:</span>            <span class="token keyword">return</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> python冒泡排序算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 冒泡排序算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>缓存的穿透、击穿、雪崩</title>
       <link href="posts/56739dcf.html"/>
       <url>posts/56739dcf.html</url>
       
@@ -27,19 +52,6 @@
             <tag> 缓存击穿 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="posts/16107.html"/>
-      <url>posts/16107.html</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2><span id="quick-start">Quick Start</span></h2><h3><span id="create-a-new-post">Create a new post</span></h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3><span id="run-server">Run server</span></h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3><span id="generate-static-files">Generate static files</span></h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3><span id="deploy-to-remote-sites">Deploy to remote sites</span></h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
       
     </entry>
     
