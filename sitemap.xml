@@ -74,6 +74,13 @@
 
   
   <url>
+    <loc>https://bulingling.top/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2021-02-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://bulingling.top/tags/%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9/</loc>
     <lastmod>2021-02-10</lastmod>
     <changefreq>daily</changefreq>
@@ -94,24 +101,17 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://bulingling.top/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2021-02-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   
   <url>
-    <loc>https://bulingling.top/categories/%E7%BC%93%E5%AD%98%E9%97%AE%E9%A2%98/</loc>
+    <loc>https://bulingling.top/categories/python%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2021-02-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://bulingling.top/categories/python%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://bulingling.top/categories/%E7%BC%93%E5%AD%98%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2021-02-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
