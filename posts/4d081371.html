@@ -442,21 +442,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-10
+                    2021-02-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    439
+                    503
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -494,7 +494,7 @@
         <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token operator">-</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
             <span class="token keyword">if</span> li<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&gt;</span> li<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
                 li<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> li<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> li<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> li<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>代码解释：</p>
+<p>代码讲解：</p>
 <ul>
 <li>li是需要排序的列表。</li>
 <li>第一层for循环一共需要遍历多少趟来回，因为最后只剩一个数时，不需要再遍历，则len(li) - 1。</li>
@@ -514,6 +514,13 @@
                 exchange <span class="token operator">=</span> <span class="token boolean">True</span>
         <span class="token keyword">if</span> <span class="token keyword">not</span> exchange<span class="token punctuation">:</span>
             <span class="token keyword">return</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2><span id="六-运行测试">六 . 运行测试:</span></h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">li <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"要排序的列表:{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span>
+bubble_sort<span class="token punctuation">(</span>li<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"排序后的列表:{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># 结果：</span>
+<span class="token comment"># 要排序的列表:[3, 4, 2, 1, 5, 6, 8, 9]</span>
+<span class="token comment"># 排序后的列表:[1, 2, 3, 4, 5, 6, 8, 9]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1099,48 +1106,46 @@ let metaPlaceholder = {"nick":"昵称(必填最少三个字)","mail":"QQ邮箱(�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/4d081371.html">
+                <a href="/posts/43d00a99.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="冒泡排序算法">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="选择排序">
                         
-                        <span class="card-title">冒泡排序算法</span>
+                        <span class="card-title">选择排序</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            python冒泡排序算法
+                            python选择排序算法
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-10
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-11
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/python%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" class="post-category">
-                                    python冒泡排序算法
+                            <a href="/categories/python%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" class="post-category">
+                                    python选择排序算法
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">冒泡排序算法</span>
+                    <a href="/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">选择排序算法</span>
                     </a>
                     
                 </div>
@@ -1442,7 +1447,7 @@ let metaPlaceholder = {"nick":"昵称(必填最少三个字)","mail":"QQ邮箱(�
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">968</span>&nbsp;字
+                class="white-color">1.7k</span>&nbsp;字
             
             
             
@@ -1671,6 +1676,20 @@ $(function () {
     <!-- Baidu Analytics -->
 
     <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
 
     
     <script src="https://cdn.jsdelivr.net/gh/shage-sg/CDN/themes/hexo-theme-matery/source/libs/others/clicklove.min.js" async="async"></script>
