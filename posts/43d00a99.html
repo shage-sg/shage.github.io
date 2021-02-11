@@ -489,7 +489,8 @@
 <li> 有序区和无序区。</li>
 <li> 无序区最小数的位置。</li>
 </ol>
-<h2><span id="三-实现代码">三 . 实现代码</span></h2><h4><span id="首先看一种比较简单容易理解的选择排序算法思路">首先看一种比较简单容易理解的选择排序算法思路：</span></h4><p>​    </p>
+<h2><span id="三-实现代码">三 . 实现代码</span></h2><p>​    首先看一种比较简单容易理解的选择排序算法思路：</p>
+<p>​    </p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">select_sort_simple</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">:</span>
     li_new <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
     <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -499,7 +500,8 @@
     <span class="token keyword">return</span> li_new<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4><span id="实现思路">实现思路：</span></h4><p>​    通过建立两个列表，使用列表的append方法和remove方法实现数据的排序。</p>
 <h4><span id="代码弱点">代码弱点：</span></h4><p>​    <code>但是大家可以仔细想一下，这种算法需要开辟两块内存区域来存放列表，一块保存原数据，另一块保存排序后的数据，假如数据量基数比较大时，这无疑是致命。</code></p>
-<h4><span id="比较难理解但是效率较高的选择排序算法思路">比较难理解但是效率较高的选择排序算法思路：</span></h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">select_sort</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<p>​    比较难理解但是效率较高的选择排序算法思路：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">select_sort</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
         mic_loc <span class="token operator">=</span> i
         <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
