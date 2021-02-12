@@ -6,7 +6,7 @@
   <link href="https://bulingling.top/atom.xml" rel="self"/>
   
   <link href="https://bulingling.top/"/>
-  <updated>2021-02-12T13:19:30.413Z</updated>
+  <updated>2021-02-12T13:29:02.006Z</updated>
   <id>https://bulingling.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://bulingling.top/posts/96555fb2.html"/>
     <id>https://bulingling.top/posts/96555fb2.html</id>
     <published>2021-02-12T12:35:25.000Z</published>
-    <updated>2021-02-12T13:19:30.413Z</updated>
+    <updated>2021-02-12T13:29:02.006Z</updated>
     
     
       
@@ -36,8 +36,12 @@
     
     
     
-    <category term="python插入排序算法" scheme="https://bulingling.top/categories/python%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://bulingling.top/categories/%E7%AE%97%E6%B3%95/"/>
     
+    
+    <category term="python算法" scheme="https://bulingling.top/tags/python%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="python数据结构" scheme="https://bulingling.top/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     <category term="插入排序算法" scheme="https://bulingling.top/tags/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
     
@@ -48,7 +52,7 @@
     <link href="https://bulingling.top/posts/43d00a99.html"/>
     <id>https://bulingling.top/posts/43d00a99.html</id>
     <published>2021-02-11T07:22:49.000Z</published>
-    <updated>2021-02-12T13:19:16.972Z</updated>
+    <updated>2021-02-12T13:29:09.805Z</updated>
     
     
       
@@ -63,8 +67,12 @@
     
     
     
-    <category term="python选择排序算法" scheme="https://bulingling.top/categories/python%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://bulingling.top/categories/%E7%AE%97%E6%B3%95/"/>
     
+    
+    <category term="python算法" scheme="https://bulingling.top/tags/python%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="python数据结构" scheme="https://bulingling.top/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     <category term="选择排序算法" scheme="https://bulingling.top/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
     
@@ -75,7 +83,7 @@
     <link href="https://bulingling.top/posts/4d081371.html"/>
     <id>https://bulingling.top/posts/4d081371.html</id>
     <published>2021-02-10T14:13:48.000Z</published>
-    <updated>2021-02-12T01:10:56.135Z</updated>
+    <updated>2021-02-12T13:28:54.609Z</updated>
     
     
       
@@ -89,10 +97,14 @@
     
     
     
-    <category term="python冒泡排序算法" scheme="https://bulingling.top/categories/python%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://bulingling.top/categories/%E7%AE%97%E6%B3%95/"/>
     
     
     <category term="冒泡排序算法" scheme="https://bulingling.top/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="python算法" scheme="https://bulingling.top/tags/python%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="python数据结构" scheme="https://bulingling.top/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   

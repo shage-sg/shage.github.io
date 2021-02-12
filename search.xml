@@ -13,12 +13,16 @@
       
       <categories>
           
-          <category> python插入排序算法 </category>
+          <category> 算法 </category>
           
       </categories>
       
       
         <tags>
+            
+            <tag> python算法 </tag>
+            
+            <tag> python数据结构 </tag>
             
             <tag> 插入排序算法 </tag>
             
@@ -38,12 +42,16 @@
       
       <categories>
           
-          <category> python选择排序算法 </category>
+          <category> 算法 </category>
           
       </categories>
       
       
         <tags>
+            
+            <tag> python算法 </tag>
+            
+            <tag> python数据结构 </tag>
             
             <tag> 选择排序算法 </tag>
             
@@ -63,7 +71,7 @@
       
       <categories>
           
-          <category> python冒泡排序算法 </category>
+          <category> 算法 </category>
           
       </categories>
       
@@ -71,6 +79,10 @@
         <tags>
             
             <tag> 冒泡排序算法 </tag>
+            
+            <tag> python算法 </tag>
+            
+            <tag> python数据结构 </tag>
             
         </tags>
       
