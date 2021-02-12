@@ -450,7 +450,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-10
+                    2021-02-12
                 </div>
                 
 
@@ -489,9 +489,9 @@
             <div id="articleContent">
                 <h2><span id="一-缓存处理的过程">一 .  缓存处理的过程</span></h2><p>​    <code>前台请求，后台先从缓存中取数据，取到直接返回结果，取不到时从数据库中取，数据库取到更新缓存，并返回结果，数据库也没取到，那直接返回空结果。</code></p>
 <hr>
-<h2><span id="二-缓存穿透"><strong>二 . 缓存穿透</strong></span></h2><p>​    <strong>描述:</strong></p>
+<h2><span id="二-缓存穿透"><strong>二 . 缓存穿透</strong></span></h2><p>​    <strong>描述</strong></p>
 <p>​    <code>指查询一个一定不存在的数据，由于缓存是不命中时需要从数据库查询，查不到数据则不写入缓存，这将导致这个不存在的数据每次请求都要到数据库去查询，进而给数据库带来压力。因为缓存和数据库中都没有的数据，但是用户不断发起请求，如发起为id为“-1”的数据或id为特别大不存在的数据。这时的用户很可能是攻击者，攻击会导致数据库压力过大。</code></p>
-<p>​    <strong>解决方案：</strong></p>
+<p>​    <strong>解决方案</strong></p>
 <ol>
 <li>接口层增加校验，如用户鉴权校验，id做基础校验，id&lt;=0的直接拦截。</li>
 <li>从缓存取不到的数据，在数据库中也没有取到，这时也可以将key-value对写为key-null，缓存有效时间可以设置短点，如30秒（设置太长会导致正常情况也没法使用）。这样可以防止攻击用户反复用同一个id暴力攻击</li>
@@ -503,11 +503,11 @@
 <li>加互斥锁。</li>
 </ol>
 <hr>
-<h2><span id="四-缓存雪崩">四 . 缓存雪崩</span></h2><p>​    <strong>描述:</strong></p>
+<h2><span id="四-缓存雪崩">四 . 缓存雪崩</span></h2><p>​    <strong>描述</strong></p>
 <p>​    <code>指缓存中数据大批量到过期时间，而查询数据量巨大，引起数据库压力过大甚至宕机。</code></p>
-<p>​    <strong>与缓存击穿的区别：</strong></p>
+<p>​    <strong>与缓存击穿的区别</strong></p>
 <p>​    <code>缓存击穿指并发查同一条数据，缓存雪崩是不同数据都过期了，很多数据都查不到从而查数据库。</code></p>
-<p>​    <strong>解决方案：</strong></p>
+<p>​    <strong>解决方案</strong></p>
 <ol>
 <li><p>缓存数据的过期时间设置随机，防止同一时间大量数据过期现象发生。</p>
 </li>
@@ -1730,7 +1730,28 @@ $(function () {
     <script src="https://cdn.jsdelivr.net/gh/shage-sg/CDN/themes/hexo-theme-matery/source/libs/instantpage/instantpage.min.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"left","width":250,"height":600},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script><script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = 'https://cdn.webpushr.com/app.min.js';fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BCH3zYMe6zYkkLz8gtozw69qJcfOqOOQwO76_f54aRHjCv6NKtoyWHaDQvevmEVC6Ip7d4XF-3ZBSR023wjjO5c');</script></body>
+
+        <script src="//cdn.jsdelivr.net/npm/js-base64/base64.min.js"></script>
+        <script>
+        const hasAttr = (e,a) => a.some(_=> e.attr(_)!==undefined);
+        $('a').each(function() {
+          const $this = $(this);
+          if(hasAttr($this,["data-fancybox","ignore-external-link"])) return;
+          const href = $this.attr('href');
+          if (href && href.match('^((http|https|thunder|qqdl|ed2k|Flashget|qbrowser|ftp|rtsp|mms)://)')) {
+            const strs = href.split('/');
+            if (strs.length >= 3) {
+                const host = strs[2];
+                if (host !== 'your domain' || window.location.host) {
+                    $this.attr('href', '/go.html?u='+Base64.encode(href)+'').attr('rel', 'external nofollow noopener noreferrer');
+                    if (true) {
+                        $this.attr('target', '_blank');
+                    }
+                }
+            }
+          }
+        });
+        </script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"left","width":250,"height":600},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script><script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = 'https://cdn.webpushr.com/app.min.js';fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BCH3zYMe6zYkkLz8gtozw69qJcfOqOOQwO76_f54aRHjCv6NKtoyWHaDQvevmEVC6Ip7d4XF-3ZBSR023wjjO5c');</script></body>
 
 </html>
 
