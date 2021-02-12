@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="选择排序算法, Python AI Hadoop Hbase MapReduce">
+    <meta name="keywords" content="插入排序算法, Python AI Hadoop Hbase MapReduce">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>选择排序算法 | 啵啵</title>
+    <title>插入排序算法 | 啵啵</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/shage-sg/CDN/themes/hexo-theme-matery/source/libs/awesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/shage-sg/CDN/themes/hexo-theme-matery/source/libs/materialize/materialize.min.css">
@@ -289,12 +289,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">选择排序算法</h1>
+                    <h1 class="description center-align post-title">插入排序算法</h1>
                 </div>
             </div>
         </div>
@@ -410,8 +410,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-                                <span class="chip bg-color">选择排序算法</span>
+                            <a href="/tags/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">插入排序算法</span>
                             </a>
                         
                     </div>
@@ -422,8 +422,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/python%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" class="post-category">
-                                python选择排序算法
+                            <a href="/categories/python%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" class="post-category">
+                                python插入排序算法
                             </a>
                         
                     </div>
@@ -435,7 +435,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-11
+                    2021-02-12
                 </div>
                 
 
@@ -449,7 +449,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    682
+                    654
                 </div>
                 
 
@@ -479,63 +479,54 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <center> 在这里bobo预祝大家新年快乐！！</center>
+                <center> 在这里bobo祝大家新年快乐！！</center>
 
-<h1><span id="python选择排序算法">Python选择排序算法</span></h1><h2><span id="一-选择排序算法的基本思想">一  . 选择排序算法的基本思想</span></h2><ol>
-<li> 一趟排序记录最小的数，放到第一个位置。</li>
-<li> 再一趟排序记录列表无序区最小的数，放到第二个位置，直至排序全部依次完成。</li>
+<h1><span id="python插入排序算法">Python插入排序算法</span></h1><h2><span id="一-插入排序算法的基本思想">一 . 插入排序算法的基本思想</span></h2><p>​    在这里我先举一个小例子，帮助大家理解插入排序算法，就比如现在有一副扑克牌放在桌子上，我们只能看到牌的背面，现在我们一次拿出一张牌，放到手中，依次取若干张，在每取一次牌，我们就插入到手里的牌中，始终保持手中的牌是有序的。</p>
+<ol>
+<li>插入排序是指在待排序的元素中，假设前面n-1(其中n&gt;=2)个数已经是排好顺序的。</li>
+<li>现将第n个数插到前面已经排好的序列中，然后找到合适自己的位置，使得插入第n个数的这个序列也是排好顺序的。</li>
+<li>按照此法对所有元素进行插入，直到整个序列排为有序的过程。</li>
 </ol>
 <hr>
 <h2><span id="二-算法关键点">二 . 算法关键点</span></h2><ol>
-<li> 有序区和无序区。</li>
-<li> 无序区最小数的位置。</li>
+<li>有序区和无序区。</li>
+<li>待插入数值与有序区的比较过程。</li>
+<li>最终确定待插入数值的插入位置。</li>
 </ol>
 <hr>
-<h2><span id="三-实现代码">三 . 实现代码</span></h2><p>​    首先看一种比较简单容易理解的选择排序算法思路：</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">select_sort_simple</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    li_new <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        min_value <span class="token operator">=</span> <span class="token builtin">min</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span>
-        li_new<span class="token punctuation">.</span>append<span class="token punctuation">(</span>min_value<span class="token punctuation">)</span>
-        li<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>min_value<span class="token punctuation">)</span>
-    <span class="token keyword">return</span> li_new<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>性能优化前的实现思路：</p>
-<p>​    通过建立两个列表，使用列表的append方法和remove方法实现数据的排序。</p>
-<p>代码弱点：</p>
-<p>​    <code>但是大家可以仔细想一下，这种算法需要开辟两块内存区域来存放列表，一块保存原数据，另一块保存排序后的数据，假如数据量基数比较大时，这无疑是致命。</code></p>
-<p>​    比较难理解但是效率较高的选择排序算法思路：</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">select_sort</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        mic_loc <span class="token operator">=</span> i
-        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> li<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;</span> li<span class="token punctuation">[</span>min_loc<span class="token punctuation">]</span><span class="token punctuation">:</span>
-                min_loc <span class="token operator">=</span> j
-            li<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> li<span class="token punctuation">[</span>min_loc<span class="token punctuation">]</span> <span class="token operator">=</span> li<span class="token punctuation">[</span>min_loc<span class="token punctuation">]</span><span class="token punctuation">,</span> li<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>性能优化后的实现思路：</p>
-<p>​    通过建立单个列表，然后利用列表的下标来替换相对应位置的元素。</p>
+<h2><span id="三-实现代码">三 . 实现代码</span></h2><p>​    插入排序的伪代码：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># encoding=utf-8</span>
+<span class="token comment"># Time : 2021/2/12 20:07 </span>
+<span class="token comment"># Author : 啵啵</span>
+<span class="token comment"># File : insert_sort.py </span>
+<span class="token comment"># Software: PyCharm</span>
+<span class="token comment"># 插入排序算法</span>
+
+<span class="token keyword">def</span> <span class="token function">insert_sort</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># i表示摸到的牌的下标</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        temp <span class="token operator">=</span> li<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        <span class="token comment"># j指的是手里的牌的下标</span>
+        j <span class="token operator">=</span> i <span class="token operator">-</span> <span class="token number">1</span>
+        <span class="token keyword">while</span> j <span class="token operator">&gt;=</span> <span class="token number">0</span> <span class="token keyword">and</span> li<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&gt;</span> temp<span class="token punctuation">:</span>
+            li<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> li<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+            j <span class="token operator">-=</span><span class="token number">1</span>
+        li<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> temp<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>代码讲解：</p>
 <ol>
-<li> 第一层for循环决定选择排序算法的趟数。因为只剩最后一个数时，列表则不需要再次进行排序，所以len(li) - 1。</li>
-<li> min_loc是一个标志位，最小值的下标。默认是无序区的第一个数。</li>
-<li>第二层for循环是无序区相邻两个数进行比较，min_loc标志位保持为较小的数的下标。</li>
-<li>无序区最小值移动到无序区的第一个，此轮循环结束，无序区的个数减一，有序区的个数加一。</li>
+<li>第一层for循环是决定插入排序算法的趟数，因为有序区只有一个数时，这个数即为最大，不需要进行插入排序，所以下标从1开始算，与有序区的那个数进行比较。</li>
+<li>temp用于临时存储抽取到的数。</li>
+<li>while循环需要确保取到的数与无序的数进行比较并且一旦抽取到的数比有序区的某个数就结束循环。</li>
+<li>li[j+1] = temp这行代码是将抽取到的数插入到正确的位置。</li>
 </ol>
-<p>代码优点：</p>
-<p>​    <code>select_sort选择排序算法，只使用了一块内存区域用于存储列表，减小内存的开销。</code></p>
-<p>时间复杂度：</p>
-<p>O(n<sup>2</sup>)</p>
-<h2><span id="四-代码优化">四 . 代码优化</span></h2><p>​    如果无序区的比较一趟之后，第一个数依然是最小的数，则不需要发生位置交换。优化后代码如下：</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">select_sort</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        min_loc <span class="token operator">=</span> i
-        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> li<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;</span> li<span class="token punctuation">[</span>min_loc<span class="token punctuation">]</span><span class="token punctuation">:</span>
-                min_loc <span class="token operator">=</span> j
-        <span class="token keyword">if</span> min_loc <span class="token operator">!=</span> i<span class="token punctuation">:</span>
-            li<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> li<span class="token punctuation">[</span>min_loc<span class="token punctuation">]</span> <span class="token operator">=</span> li<span class="token punctuation">[</span>min_loc<span class="token punctuation">]</span><span class="token punctuation">,</span> li<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2><span id="五-运行测试">五 . 运行测试</span></h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">li <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">]</span>
+<p>​    插入排序算法思路相比于冒泡排序算法和选择排序算法有一点难度，重点是要把握好无序区，有序区，位置交换这三点。</p>
+<hr>
+<h2><span id="四-时间复杂度">四 . 时间复杂度</span></h2><p>​    涉及两层循环则时间复杂度为：O(n<sup>2</sup>)</p>
+<hr>
+<h2><span id="五-运行测试">五 . 运行测试</span></h2><p>​    </p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">li <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"要排序的列表:{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span>
-select_sort<span class="token punctuation">(</span>li<span class="token punctuation">)</span>
+insert_sort<span class="token punctuation">(</span>li<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"排序后的列表:{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token comment"># 结果：</span>
 <span class="token comment"># 要排序的列表:[3, 4, 2, 1, 5, 6, 8, 9]</span>
@@ -566,7 +557,7 @@ select_sort<span class="token punctuation">(</span>li<span class="token punctuat
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://bulingling.top/posts/43d00a99.html">https://bulingling.top/posts/43d00a99.html</a>
+                    <a href="https://bulingling.top/posts/96555fb2.html">https://bulingling.top/posts/96555fb2.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -604,8 +595,8 @@ select_sort<span class="token punctuation">(</span>li<span class="token punctuat
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-                                    <span class="chip bg-color">选择排序算法</span>
+                                <a href="/tags/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">插入排序算法</span>
                                 </a>
                             
                         </div>
@@ -1125,9 +1116,10 @@ let metaPlaceholder = {"nick":"昵称(必填最少三个字)","mail":"QQ邮箱(�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/posts/96555fb2.html">
                     <div class="card-image">
@@ -1145,9 +1137,9 @@ let metaPlaceholder = {"nick":"昵称(必填最少三个字)","mail":"QQ邮箱(�
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1160,6 +1152,7 @@ let metaPlaceholder = {"nick":"昵称(必填最少三个字)","mail":"QQ邮箱(�
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1178,31 +1171,31 @@ let metaPlaceholder = {"nick":"昵称(必填最少三个字)","mail":"QQ邮箱(�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/4d081371.html">
+                <a href="/posts/43d00a99.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="冒泡排序算法">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="选择排序算法">
                         
-                        <span class="card-title">冒泡排序算法</span>
+                        <span class="card-title">选择排序算法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            python冒泡排序算法
+                            python选择排序算法
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-11
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/python%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" class="post-category">
-                                    python冒泡排序算法
+                            <a href="/categories/python%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" class="post-category">
+                                    python选择排序算法
                                 </a>
                             
                             
@@ -1212,8 +1205,8 @@ let metaPlaceholder = {"nick":"昵称(必填最少三个字)","mail":"QQ邮箱(�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">冒泡排序算法</span>
+                    <a href="/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">选择排序算法</span>
                     </a>
                     
                 </div>

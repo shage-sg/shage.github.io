@@ -4,7 +4,32 @@
   
     
     <entry>
-      <title>选择排序</title>
+      <title>插入排序算法</title>
+      <link href="posts/96555fb2.html"/>
+      <url>posts/96555fb2.html</url>
+      
+        <content type="html"><![CDATA[<center> 在这里bobo祝大家新年快乐！！</center><h1><span id="python插入排序算法">Python插入排序算法</span></h1><h2><span id="一-插入排序算法的基本思想">一 . 插入排序算法的基本思想</span></h2><p>​    在这里我先举一个小例子，帮助大家理解插入排序算法，就比如现在有一副扑克牌放在桌子上，我们只能看到牌的背面，现在我们一次拿出一张牌，放到手中，依次取若干张，在每取一次牌，我们就插入到手里的牌中，始终保持手中的牌是有序的。</p><ol><li>插入排序是指在待排序的元素中，假设前面n-1(其中n&gt;=2)个数已经是排好顺序的。</li><li>现将第n个数插到前面已经排好的序列中，然后找到合适自己的位置，使得插入第n个数的这个序列也是排好顺序的。</li><li>按照此法对所有元素进行插入，直到整个序列排为有序的过程。</li></ol><hr><h2><span id="二-算法关键点">二 . 算法关键点</span></h2><ol><li>有序区和无序区。</li><li>待插入数值与有序区的比较过程。</li><li>最终确定待插入数值的插入位置。</li></ol><hr><h2><span id="三-实现代码">三 . 实现代码</span></h2><p>​    插入排序的伪代码：</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># encoding=utf-8</span><span class="token comment"># Time : 2021/2/12 20:07 </span><span class="token comment"># Author : 啵啵</span><span class="token comment"># File : insert_sort.py </span><span class="token comment"># Software: PyCharm</span><span class="token comment"># 插入排序算法</span><span class="token keyword">def</span> <span class="token function">insert_sort</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token comment"># i表示摸到的牌的下标</span>    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>        temp <span class="token operator">=</span> li<span class="token punctuation">[</span>i<span class="token punctuation">]</span>        <span class="token comment"># j指的是手里的牌的下标</span>        j <span class="token operator">=</span> i <span class="token operator">-</span> <span class="token number">1</span>        <span class="token keyword">while</span> j <span class="token operator">&gt;=</span> <span class="token number">0</span> <span class="token keyword">and</span> li<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&gt;</span> temp<span class="token punctuation">:</span>            li<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> li<span class="token punctuation">[</span>j<span class="token punctuation">]</span>            j <span class="token operator">-=</span><span class="token number">1</span>        li<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> temp<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>代码讲解：</p><ol><li>第一层for循环是决定插入排序算法的趟数，因为有序区只有一个数时，这个数即为最大，不需要进行插入排序，所以下标从1开始算，与有序区的那个数进行比较。</li><li>temp用于临时存储抽取到的数。</li><li>while循环需要确保取到的数与无序的数进行比较并且一旦抽取到的数比有序区的某个数就结束循环。</li><li>li[j+1] = temp这行代码是将抽取到的数插入到正确的位置。</li></ol><p>​    插入排序算法思路相比于冒泡排序算法和选择排序算法有一点难度，重点是要把握好无序区，有序区，位置交换这三点。</p><hr><h2><span id="四-时间复杂度">四 . 时间复杂度</span></h2><p>​    涉及两层循环则时间复杂度为：O(n<sup>2</sup>)</p><hr><h2><span id="五-运行测试">五 . 运行测试</span></h2><p>​    </p><pre class="line-numbers language-python" data-language="python"><code class="language-python">li <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"要排序的列表:{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span>insert_sort<span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"排序后的列表:{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment"># 结果：</span><span class="token comment"># 要排序的列表:[3, 4, 2, 1, 5, 6, 8, 9]</span><span class="token comment"># 排序后的列表:[1, 2, 3, 4, 5, 6, 8, 9]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> python插入排序算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 插入排序算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>选择排序算法</title>
       <link href="posts/43d00a99.html"/>
       <url>posts/43d00a99.html</url>
       
