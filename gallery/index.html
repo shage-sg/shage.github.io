@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签, Python AI Hadoop Hbase MapReduce">
+    <meta name="keywords" content="gallery, Python AI Hadoop Hbase MapReduce">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签 | 啵啵</title>
+    <title>gallery | 啵啵</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/shage-sg/CDN/themes/source/libs/awesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/shage-sg/CDN/themes/source/libs/materialize/materialize.min.css">
@@ -422,146 +422,182 @@
 
     </div>
 </div>
+<!-- 增加相册显示的特效样式 -->
+<style>
+    .photo {
+        padding: 0 40px!important;
+        display: inline-block;
+        position: relative;
+        transition: all .6s;
+    }
+    .biaotiss {
+        padding: 8px 10px;
+        color: #4c4c4e;
+        text-align: center;
+        font-weight: 400;
+        font-size: 18px;
+    }
+    .img-item {
+        padding: .2rem;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 1px 2px 2px 0 #aaa;
+        transition: all .4s cubic-bezier(.63,.15,.03,1.12);
+        margin-bottom: 20px;
+    }
+    .photo:nth-child(odd) {
+        transform: rotateZ(-5deg);
+    }    
+    .photo:nth-child(even) {
+        transform: rotateZ(5deg);
+    }
+    .text_des{
+        position: absolute;
+        width: 92%;
+        height: 100%;
+        top: 0;
+        color: #000;
+        overflow: hidden;
+    }
+    .text_des h3{
+        margin: 5px 0 8px 0px;
+        right: 40px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+        position: absolute;
+        top: 10%;
+        font-style: italic;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        /*transform: translateX(200px);  */
+    }
+    .text_des p{
+        left: 15px;
+        position: absolute;
+        top: 50%;
+    /*    transform: translateX(-200px); 
+        transition-delay: 0.2s;    */
+    }
+    .my-gallery .photo img {
+        border-radius: 10px;
+        height: 240px;
+    }
+    .card .card-content {
+        padding: 24px 24px 24px 24px;
+    }
+    .miaoshus {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 95%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+        font-size: 16px;
+        margin: 12px auto;
+    }
+    body.dark .miaoshus {
+        background: 0 0;
+        border: 1px dashed #888;
+    }
+    .img-item {
+            transition: all 0.4s ease-out;
+        }
+        .img-item a img{
+            opacity: 1;
+            transition: all 0.4s ease-out;
+        }
+        .img-item a:hover img{
+            opacity: 0.8;
+        }   
+        .biaotiss {
+            font-family: MV Boli;
+        }   
+        .miaoshus .title {
+        font-family: MV Boli;
+    } 
+    /*大屏幕下(桌面类)的样式*/
+    @media only screen and (min-width: 993px) {
+        .text_des h3{
+            transform: translateX(200px);
+        }
+        .text_des p{
+            transform: translateX(-200px); 
+            transition-delay: 0.2s;
+        }
+        .animate-text {
+            opacity: 0;
+            transition: all 0.6s ease-in-out; 
+        }
+    }
+    /*小屏幕下(桌面类)的样式*/
+    @media only screen and (max-width: 500px) {
+        .my-gallery .photo img {
+            height: 186px;
+        }
+    }
 
+</style>
 <main class="content">
-
-    
-
-<div id="tags" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
-            </div>
-            <div class="tag-chips">
-                
-                
-                <a href="/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" title="冒泡排序算法: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="冒泡排序算法" style="background-color: #F9EBEA;">冒泡排序算法
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/python%E7%AE%97%E6%B3%95/" title="python算法: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="python算法" style="background-color: #F5EEF8;">python算法
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="python数据结构: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="python数据结构" style="background-color: #D5F5E3;">python数据结构
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" title="选择排序算法: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="选择排序算法" style="background-color: #E8F8F5;">选择排序算法
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9/" title="缓存雪崩: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="缓存雪崩" style="background-color: #FEF9E7;">缓存雪崩
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F/" title="缓存穿透: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="缓存穿透" style="background-color: #F8F9F9;">缓存穿透
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E7%BC%93%E5%AD%98%E5%87%BB%E7%A9%BF/" title="缓存击穿: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="缓存击穿" style="background-color: #82E0AA;">缓存击穿
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" title="插入排序算法: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="插入排序算法" style="background-color: #D7BDE2;">插入排序算法
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/PyCharm%E6%B0%B8%E4%B9%85%E7%A0%B4%E8%A7%A3%E6%96%B9%E6%B3%95/" title="PyCharm永久破解方法: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="PyCharm永久破解方法" style="background-color: #A3E4D7;">PyCharm永久破解方法
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" title="快速排序算法: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="快速排序算法" style="background-color: #85C1E9;">快速排序算法
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
+    <div class="container chip-container">
+        <div class="card">
+            <div class="card-content">
+                <div class="tag-title center-align">
+                    <div class="miaoshus">
+                        <div class="title center-align">“ 光影流年 ”</div>
+                        “ 这里有光影流年，还有两朵穿衣裳的云，相拥在明天的河岸。”                      
+                    </div>
+                </div>
+                <div class="my-gallery">
+                    <div class="row">
+                    
+                        
+                        
+                            
+                            
+                            <div class="photo col s12 m6 l4">
+                                <div class="img-item">
+                                    <a href="./鸽鸽">
+                                        <img src="/medias/loading.svg" data-src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/1.png" class="responsive-img" alt="img"+0 />
+                                        <div class="biaotiss">“ 鸽鸽 ”<br>“ 2021-2 ”</div>
+                                    </a>
+                                </div>                              
+                            </div>
+                            
+                        
+                    
+                </div>
             </div>
         </div>
     </div>
-</div>
-  
-
-    
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/shage-sg/CDN/themes/source/libs/jqcloud/jqcloud.min.css">
-<style type="text/css">
-    #tag-wordcloud {
-        width: 100%;
-        height: 300px;
-    }
-</style>
-
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="tag-wordcloud" class="card-content"></div>
-    </div>
-</div>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shage-sg/CDN/themes/source/libs/jqcloud/jqcloud-1.0.4.min.js"></script>
-<script type="text/javascript">
-    
-
-    $('#tag-wordcloud').jQCloud([{"text":"冒泡排序算法","weight":1,"link":"/tags/冒泡排序算法/"},{"text":"python算法","weight":4,"link":"/tags/python算法/"},{"text":"python数据结构","weight":4,"link":"/tags/python数据结构/"},{"text":"选择排序算法","weight":1,"link":"/tags/选择排序算法/"},{"text":"缓存雪崩","weight":1,"link":"/tags/缓存雪崩/"},{"text":"缓存穿透","weight":1,"link":"/tags/缓存穿透/"},{"text":"缓存击穿","weight":1,"link":"/tags/缓存击穿/"},{"text":"插入排序算法","weight":1,"link":"/tags/插入排序算法/"},{"text":"PyCharm永久破解方法","weight":1,"link":"/tags/PyCharm永久破解方法/"},{"text":"快速排序算法","weight":1,"link":"/tags/快速排序算法/"}], {
-        autoResize: true
-    });
-</script>
-
-    
-
-
-
-
+    <script>
+        start()
+            $(window).on('scroll', function(){
+            start();
+        })
+        function start(){
+              //.not('[data-isLoaded]')选中已加载的图片不需要重新加载
+            $('.container img').not('[data-isLoaded]').each(function(){
+                var $node = $(this)
+                if( isShow($node) ){
+                    loadImg($node);
+                }
+            });
+        }
+        //判断一个元素是不是出现在窗口(视野)
+        function isShow($node){
+            return $node.offset().top <= $(window).height() + $(window).scrollTop();
+        }
+        //加载图片
+        function loadImg($img){
+        //.attr(值)
+        //.attr(属性名称,值)
+            $img.attr('src', $img.attr('data-src')); //把data-src的值 赋值给src
+            $img.attr('data-isLoaded', 1);//已加载的图片做标记
+        }
+    </script>
 </main>
-
 
     <footer class="page-footer bg-color">
     
