@@ -40,15 +40,6 @@
 
 <body>
     <script>
-        if (localStorage.getItem('dark') === '1') {
-        document.body.classList.add('dark');
-        }
-        else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
-        document.body.classList.add('dark');
-        } 
-        else if (matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-        }
 	// 网站主题切换模式开始
         if (localStorage.getItem('themespring') === '1') {
             document.body.classList.add('themespring');
@@ -58,8 +49,9 @@
         } 
     </script>
     <a onclick="switchNightMode()" id="sma">
-        <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
+  	<i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
     </a>
+
 
 
 
@@ -331,7 +323,7 @@
 			
 			    <i class="fa-fw fas fa-heart"></i>
 			
-			todolist
+			十年之约
 		</a>
           
         </li>
@@ -1423,16 +1415,16 @@ let metaPlaceholder = {"nick":"昵称(必填最少三个字)","mail":"QQ邮箱(�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">选择排序算法</span>
-                    </a>
-                    
                     <a href="/tags/python%E7%AE%97%E6%B3%95/">
                         <span class="chip bg-color">python算法</span>
                     </a>
                     
                     <a href="/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
                         <span class="chip bg-color">python数据结构</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">选择排序算法</span>
                     </a>
                     
                 </div>
