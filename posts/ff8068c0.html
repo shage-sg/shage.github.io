@@ -49,11 +49,18 @@
         else if (matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
         }
+	// 网站主题切换模式开始
+        if (localStorage.getItem('themespring') === '1') {
+            document.body.classList.add('themespring');
+            }
+            else if (matchMedia('(prefers-color-scheme: themespring)').matches) {
+            document.body.classList.add('themespring');
+        } 
     </script>
     <a onclick="switchNightMode()" id="sma">
         <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
     </a>
- 
+
 
 
 

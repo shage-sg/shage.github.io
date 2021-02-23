@@ -176,18 +176,65 @@ $(function () {
 });
 
 
-    // 深色模式设置
-    function switchNightMode() {
+// 网站全局深色模式设置开始
+function switchNightMode() {
+    var body = document.body;
+    if(body.classList.contains('dark')){
+      document.body.classList.remove('dark');
+      localStorage.setItem('dark','0');
+      $('#nightMode').removeClass("fa-lightbulb-o").addClass("fa-moon-o");
+      return;
+    } else {
+      document.body.classList.add('dark');
+      localStorage.setItem('dark','1');
+      $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o");
+      return;
+    }
+  };
+//   网站全局深色模式设置结束
+
+// 网站主题切换模式开始
+    // 中国节日按钮切换
+    function switchSpringThemes() {
         var body = document.body;
-        if(body.classList.contains('dark')){
-        document.body.classList.remove('dark');
-        localStorage.setItem('dark','0');
-        $('#nightMode').removeClass("fa-lightbulb-o").addClass("fa-moon-o");
+        var weiletree = document.getElementById('weletree');
+        if(body.classList.contains('themechris')){
+            document.body.classList.remove('themechris');
+            localStorage.setItem('themechris','0');
+            document.body.classList.add('themespring');
+            localStorage.setItem('themespring','1');
+            return;
+        }
+        if(body.classList.contains('themespring')){
+        document.body.classList.remove('themespring');
+        localStorage.setItem('themespring','0');
         return;
         } else {
-        document.body.classList.add('dark');
-        localStorage.setItem('dark','1');
-        $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o");
+        document.body.classList.add('themespring');
+        localStorage.setItem('themespring','1');
         return;
         }
-    }
+    };
+
+    // 圣诞节按钮切换
+    function switchChrisThemes() {
+        var body = document.body;
+        var weiletree = document.getElementById('weletree');
+        if(body.classList.contains('themespring')){
+            document.body.classList.remove('themespring');
+            localStorage.setItem('themespring','0');
+            document.body.classList.add('themechris');
+            localStorage.setItem('themechris','1');
+            return;
+        }
+        if(body.classList.contains('themechris')){
+        document.body.classList.remove('themechris');
+        localStorage.setItem('themechris','0');
+        return;
+        } else {
+        document.body.classList.add('themechris');
+        localStorage.setItem('themechris','1');
+        return;
+        }
+    };
+// 网站主题切换模式结束

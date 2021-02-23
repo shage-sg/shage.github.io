@@ -49,11 +49,18 @@
         else if (matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
         }
+	// 网站主题切换模式开始
+        if (localStorage.getItem('themespring') === '1') {
+            document.body.classList.add('themespring');
+            }
+            else if (matchMedia('(prefers-color-scheme: themespring)').matches) {
+            document.body.classList.add('themespring');
+        } 
     </script>
     <a onclick="switchNightMode()" id="sma">
         <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
     </a>
- 
+
 
 
 
@@ -480,10 +487,19 @@
                 </a>
                 
                 
+                <a href="/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" title="冒泡排序算法: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            data-tagname="冒泡排序算法" style="background-color: #E8F8F5;">冒泡排序算法
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/tags/%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9/" title="缓存雪崩: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="缓存雪崩" style="background-color: #E8F8F5;">缓存雪崩
+                            data-tagname="缓存雪崩" style="background-color: #FEF9E7;">缓存雪崩
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -492,7 +508,7 @@
                 <a href="/tags/%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F/" title="缓存穿透: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="缓存穿透" style="background-color: #FEF9E7;">缓存穿透
+                            data-tagname="缓存穿透" style="background-color: #F8F9F9;">缓存穿透
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -501,16 +517,7 @@
                 <a href="/tags/%E7%BC%93%E5%AD%98%E5%87%BB%E7%A9%BF/" title="缓存击穿: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="缓存击穿" style="background-color: #F8F9F9;">缓存击穿
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" title="冒泡排序算法: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="冒泡排序算法" style="background-color: #82E0AA;">冒泡排序算法
+                            data-tagname="缓存击穿" style="background-color: #82E0AA;">缓存击穿
                         <span class="tag-length">1</span>
                     </span>
                 </a>
