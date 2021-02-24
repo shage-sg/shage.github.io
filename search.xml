@@ -4,6 +4,256 @@
   
     
     <entry>
+      <title>多人协作开发</title>
+      <link href="posts/11c5853f.html"/>
+      <url>posts/11c5853f.html</url>
+      
+        <content type="html"><![CDATA[<h4><span id="多人协作开发实现步骤">多人协作开发实现步骤</span></h4><pre><code>1. 由张三上传一个基本版本到张三的github远程库master上。2. 李四登录github账户访问remoteb版本库。fork  将张三的版本转载到李四的个人github中。3.李四：在github上新建一个分支dev  本地库中也得新建一个dev分支4.李四：将本地库的dev分支和远程库的dev分支进行关联</code></pre><h4><span id="本地库连接远程库">本地库连接远程库</span></h4><pre><code>1. github注册账户2. 创建远程版本库3. 本地库和远程库进行关联 </code></pre><pre class="line-numbers language-none"><code class="language-none">git remote -v    git remote add origin git@github.com:pythonde/remoteRepository.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><ol start="4"><li>更新本地库<pre class="line-numbers language-none"><code class="language-none">git pull --rebase origin master    git status    git add hello.py    git commit -m '描述信息'<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li>将本地库内容上传至远程库</li></ol><pre class="line-numbers language-none"><code class="language-none">git push -u origin master    <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Git多协议方式</title>
+      <link href="posts/558409fe.html"/>
+      <url>posts/558409fe.html</url>
+      
+        <content type="html"><![CDATA[<h4><span id="git支持多协议方式">Git支持多协议方式</span></h4><pre><code>Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令。但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https。</code></pre><h4><span id="加密方式">加密方式</span></h4><ol><li><p>对称加密：性能高</p><pre class="line-numbers language-none"><code class="language-none">   用什么加密就用什么解密（异或）'123'^'456'---&gt;'4321432'   加密'4321432'^'456'---&gt;'123'   解密<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li><li><p>非对称加密：安全性高（支付宝采用下面加密方式）</p><pre><code> 公钥加密，私钥解密</code></pre><pre class="line-numbers language-none"><code class="language-none"> 客户端：服务器端：服务器端的公钥             服务器端的私钥客户端的私钥               客户端的公钥<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>SSH密钥对（公钥+私钥）   </p><p> 客户端：git很简单-密钥配对（验证用户时使用SSH），git服务器会随机生成一个对称的密钥。</p><p> 发给客户端，客户端通过对称的密钥对数据传输的时候使用的是对称加密。</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git多协议方式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>远程库和本地库</title>
+      <link href="posts/8a4a6d1e.html"/>
+      <url>posts/8a4a6d1e.html</url>
+      
+        <content type="html"><![CDATA[<p>Git是分布式版本控制系统，同一个Git仓库，可以分布到不同的机器上。<br>    github网站就是提供Git仓库托管服务的，所以，只要注册一个GitHub账号，就可以免费获得Git远程仓库。</p><pre><code>github官网：https://github.com/</code></pre><h4><span id="远程库">远程库</span></h4><pre><code>1. github版本库即为远程库。</code></pre><h4><span id="本地库">本地库</span></h4><pre><code>1. 本地创建的Git版本库即为本地库。</code></pre><h4><span id="使用说明">使用说明</span></h4><pre><code>1. 先在github官网中注册账户。2. 创建SSH key。    由于你的本地Git仓库和GitHub仓库之间的传输是通过SSH加密的。    Windows下打开Git Bash，创建SSH key。    $ ssh-keygen -t rsa -C "youremail@example.com"3. 在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件（密钥对）。    用户主目录：C:\Users\Administrator4. 登陆GitHub，打开"Account settings"，"SSH Keys"页面。5. 点"Add SSH Key"，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容。</code></pre><p>​     </p><h4><span id="本地库-关联-远程库">本地库 关联 远程库</span></h4><pre><code>origin:默认远程库名称</code></pre><pre class="line-numbers language-none"><code class="language-none"># 在本地库当前分支    $ git remote add origin git@github.com:pythonde/newRepository.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h4><span id="上传数据到远程库">上传数据到远程库</span></h4><pre class="line-numbers language-none"><code class="language-none">$ git push -u origin devThe authenticity of host 'github.com (13.250.177.223)' can't be established.RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.Are you sure you want to continue connecting (yes/no)? yesWarning: Permanently added 'github.com,13.250.177.223' (RSA) to the list of known hosts.To github.com:pythonde/newRepository.git ! [rejected]        master -&gt; master (fetch first)error: failed to push some refs to 'git@github.com:pythonde/newRepository.git'hint: Updates were rejected because the remote contains work that you dohint: not have locally. This is usually caused by another repository pushinghint: to the same ref. You may want to first integrate the remote changeshint: (e.g., 'git pull ...') before pushing again.hint: See the 'Note about fast-forwards' in 'git push --help' for details.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4><span id="远程库更新本地库">远程库更新本地库</span></h4><pre class="line-numbers language-none"><code class="language-none">$ git pull --rebase origin devFrom github.com:pythonde/newRepository * branch            dev        -&gt; FETCH_HEADFirst, rewinding head to replay your work on top of it...Applying: first addApplying: dev secondApplying: test2 dev third<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4><span id="成功将本地库内容上传到远程库">成功将本地库内容上传到远程库</span></h4><pre class="line-numbers language-none"><code class="language-none">$ git push -u origin devCounting objects: 9, done.Delta compression using up to 4 threads.Compressing objects: 100% (7/7), done.Writing objects: 100% (9/9), 852 bytes | 852.00 KiB/s, done.Total 9 (delta 0), reused 0 (delta 0)To github.com:pythonde/newRepository.git   a69bffd..da7dd11  dev -&gt; devBranch 'dev' set up to track remote branch 'dev' from 'origin'.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4><span id="注意事项">注意事项</span></h4><pre><code>1. 远程操作git push / git pull 时，本地库和远程库分支名相同。2. 第一次push时：$ git push -u origin dev3. 之后只需要简写：$ git push  origin dev4. 远程库分支之间的合并，创建一个pull request进行合并。</code></pre><h4><span id="查看远程库信息">查看远程库信息</span></h4><pre><code>$ git remote -v </code></pre><h4><span id="删除连接远程库">删除连接远程库</span></h4><pre><code>$ git remote rm origin</code></pre><h4><span id="从远程库下载源码到本地库">从远程库下载源码到本地库</span></h4><pre><code>$ git clone git@github.com:pythonde/newRepository.git</code></pre><p>​    </p><p>​<br>​</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git远程库和本地库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分支管理</title>
+      <link href="posts/3669e061.html"/>
+      <url>posts/3669e061.html</url>
+      
+        <content type="html"><![CDATA[<h4><span id="分支定义">分支定义</span></h4><pre><code>分支可以理解成 独立开发功能的 小房间。</code></pre><h4><span id="分支操作">分支操作</span></h4><pre class="line-numbers language-none"><code class="language-none"># 创建分支    $ git branch 分支名    # 查看分支    $ git branch# 切换分支    $ git checkout 分支名# 创建+切换分支    $ git checkout -b 分支名    # 合并某分支到当前分支    $ git merge 分支名    # 删除某分支    $ git branch -d 分支名<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4><span id="合并分支解决冲突">合并分支解决冲突</span></h4><pre class="line-numbers language-none"><code class="language-none">当前分支1   分支2 前提分支1和分支2都进行了代码修改。将分支2的内容合并到分支1# 1. 切换到当前分支1    $ git checkout 分支1    # 2. 和分支2进行合并    $ git merge 分支2    # 3. 执行第二步后出现冲突（CONFLICT）    $ git merge dev    Auto-merging hello.py    CONFLICT (content): Merge conflict in hello.py    Automatic merge failed; fix conflicts and then commit the result.# 4. 解决方案：    print 'first'    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD    print 'master second'    =======    print 'dev second'    &gt;&gt;&gt;&gt;&gt;&gt;&gt; dev    1. 编辑合并分支1和分支2的内容    2. 修改好之后，$ git add 文件名    3. $ git commit -m "描述信息"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git分支管理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Git常用命令</title>
+      <link href="posts/caff8000.html"/>
+      <url>posts/caff8000.html</url>
+      
+        <content type="html"><![CDATA[<h4><span id="文件添加操作">文件添加操作</span></h4><pre class="line-numbers language-none"><code class="language-none"># 1. 工作区中创建新文件hello.py    $ vi hello.py# 2. 查看文件状态    $ git status# 3. 将源码拷贝到暂存区    $ git add hello.py# 4. 将暂存区移动到当前分支    $ git commit -m "创建新文件hello.py"# 5. 查看状态    $ git status    On branch master    nothing to commit, working tree clean<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4><span id="文件删除操作">文件删除操作</span></h4><pre class="line-numbers language-none"><code class="language-none"># 1. 删除工作区中的文件    rm hello.py     # 2. 删除暂存区中的文件    git rm hello.py# 3. 删除当前分支中的文件    git commit -m '描述信息'<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4><span id="文件修改操作">文件修改操作</span></h4><pre class="line-numbers language-none"><code class="language-none"># 修改文件    $ vi hello.py# 查看状态    $ git status# 添加暂存区    $ git add hello.py    # 添加版本库    $ git commit -m '描述信息'<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4><span id="文件撤销操作">文件撤销操作</span></h4><pre class="line-numbers language-none"><code class="language-none"># 查看工作区和版本库里面最新版本的区别    $ git diff HEAD -- hello.py    方式1：可以撤销未被追踪的文件    # 丢弃工作区的修改    $ git checkout -- hello.py    方式2：可以撤销到任意版本    # 查看操作日志    $ git log    commit c4e993ddb36d77710dad2c7c8c18130f9a761946 (HEAD -&gt; master)    $ git log --oneline    c4e993d (HEAD -&gt; master) first add        # 回退到某个版本1    $ git reset c4e993ddb36d77710dad2c7c8c18130f9a761946        # 回退到某个版本2    $ git reset --hard c4e993ddb36d77710dad2c7c8c18130f9a761946    #回退到上一个版本    git reset HEAD            <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git常用命令 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>创建版本库</title>
+      <link href="posts/3ca287b3.html"/>
+      <url>posts/3ca287b3.html</url>
+      
+        <content type="html"><![CDATA[<h4><span id="创建版本库">创建版本库</span></h4><pre class="line-numbers language-none"><code class="language-none"># 创建文件夹    $ mkdir test# 进入当前目录    $ cd test# 查看目录    $ pwd# 将当前目录变成Git可管理的版本库又名仓库，英文名repository    $ git init    Initialized empty Git repository in D:/Tools/Git/test/.git/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git创建版本库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Git名词解释</title>
+      <link href="posts/6725a818.html"/>
+      <url>posts/6725a818.html</url>
+      
+        <content type="html"><![CDATA[<h4><span id="工作区">工作区</span></h4><pre><code>存放源码的文件夹。</code></pre><h4><span id="版本库">版本库</span></h4><pre><code>版本库又名仓库，英文名repository。这个目录里面的所有文件都可以被Git管理起来，每个文件的修改、删除，Git都能跟踪。以便任何时刻都可以追踪历史，或者在将来某个时刻可以"还原"。通过"git init"命令创建。".git"隐藏目录就是版本库。</code></pre><h4><span id="暂存区">暂存区</span></h4><pre><code>".git"目录下有一个"index"/"stage"的文件即暂存区。</code></pre><h4><span id="分支">分支</span></h4><pre><code>默认情况下，Git会自动为我们创建一个主分支（master）。".git"下有个名为"HEAD"的文件指向master分支。最新版本代码需要更新到"当前分支"。</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git名词解释 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Git下载和安装</title>
+      <link href="posts/aadc9cb4.html"/>
+      <url>posts/aadc9cb4.html</url>
+      
+        <content type="html"><![CDATA[<h4><span id="git下载安装">Git下载安装</span></h4><pre><code>windows版本下载地址:https://git-scm.com/download/win</code></pre><h4><span id="使用前准备">使用前准备</span></h4><pre><code>1. 安装完成后，在开始菜单里找到“Git”-&gt;“Git Bash”，弹出命令行窗口，说明Git安装成功。2. 安装Git之后，你要做的第一件事情就是去配置你的名字和邮箱，因为每一次提交都需要这些信息。</code></pre><pre class="line-numbers language-none"><code class="language-none">$ git config --global user.name "Your Name"$ git config --global user.email "email@example.com"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git下载和安装 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>集中式和分布式</title>
+      <link href="posts/7ee53739.html"/>
+      <url>posts/7ee53739.html</url>
+      
+        <content type="html"><![CDATA[<h4><span id="集中式版本控制软件">集中式版本控制软件</span></h4><ol><li>集中式代表：SVN</li><li>集中式特点：<ol><li>版本库是集中存放在中央服务器的。</li><li>必须实时联网才能工作。</li></ol></li></ol><h4><span id="分布式版本控制软件">分布式版本控制软件</span></h4><ol><li>分布式代表：Git</li><li>分布式特点：<ol><li>个人电脑都可以作为版本库。</li><li>速度快，使用简单。</li><li>不必实时联网。</li></ol></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 集中式和分布式开发 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Git_简介</title>
+      <link href="posts/6814ac35.html"/>
+      <url>posts/6814ac35.html</url>
+      
+        <content type="html"><![CDATA[<h4><span id="git简介">Git简介</span></h4><pre><code>Git是一个分布式版本控制软件。</code></pre><h4><span id="背景故事">背景故事</span></h4><pre><code>Linus在1991年创建了开源的Linux。在2002年以前：世界各地的志愿者把源代码文件通过diff的方式发给Linus，然后Linus本人通过手工方式合并代码。2002年-2004年：（商用版本控制软件）BitKeeper的东家BitMover公司授权Linux社区免费使用这个版本控制系统。2005年：Linus花了两周时间自己用C写了git（一个分布式版本控制软件）。2008年：GitHub网站上线了，它为开源项目免费提供Git存储。</code></pre><p>​</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git简介 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>PyCharm永久破解方法</title>
       <link href="posts/75f55e54.html"/>
       <url>posts/75f55e54.html</url>
@@ -103,11 +353,11 @@
       
         <tags>
             
+            <tag> 选择排序算法 </tag>
+            
             <tag> python算法 </tag>
             
             <tag> python数据结构 </tag>
-            
-            <tag> 选择排序算法 </tag>
             
         </tags>
       
@@ -132,11 +382,11 @@
       
         <tags>
             
-            <tag> 冒泡排序算法 </tag>
-            
             <tag> python算法 </tag>
             
             <tag> python数据结构 </tag>
+            
+            <tag> 冒泡排序算法 </tag>
             
         </tags>
       
