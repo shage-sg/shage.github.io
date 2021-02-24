@@ -92,6 +92,17 @@
   
   <li class="hide-on-med-and-down nav-item">
     
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
     <a href="/artitalk" class="waves-effect waves-light">
       
       <i class="fas fa-comment" style="zoom: 0.6;"></i>
@@ -225,6 +236,17 @@
 			    <i class="fa-fw fas fa-bookmark"></i>
 			
 			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
 		</a>
           
         </li>
@@ -611,7 +633,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"Git","value":10},{"name":"算法","value":4},{"name":"缓存问题","value":1},{"name":"PyCharm永久破解方法","value":1}],
+                data: [{"name":"Git","value":10},{"name":"缓存问题","value":1},{"name":"算法","value":4},{"name":"PyCharm永久破解方法","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -635,7 +657,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["python算法","python数据结构","Git简介","Git下载和安装","Git多协议方式","Git名词解释","Git常用命令","选择排序算法","冒泡排序算法","缓存雪崩"]
+                data: ["python算法","python数据结构","Git简介","Git下载和安装","Git名词解释","Git多协议方式","Git常用命令","缓存雪崩","缓存穿透","缓存击穿"]
             }
         ],
         yAxis: [
@@ -830,44 +852,20 @@
             
             
             
-            <a href="/tags/Git%E5%A4%9A%E5%8D%8F%E8%AE%AE%E6%96%B9%E5%BC%8F/">
-                <span class="chip center-align waves-effect waves-light chip-default">Git多协议方式</span>
-            </a>
-            
-            
-            
             <a href="/tags/Git%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/">
                 <span class="chip center-align waves-effect waves-light chip-default">Git名词解释</span>
             </a>
             
             
             
+            <a href="/tags/Git%E5%A4%9A%E5%8D%8F%E8%AE%AE%E6%96%B9%E5%BC%8F/">
+                <span class="chip center-align waves-effect waves-light chip-default">Git多协议方式</span>
+            </a>
+            
+            
+            
             <a href="/tags/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
                 <span class="chip center-align waves-effect waves-light chip-default">Git常用命令</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-                <span class="chip center-align waves-effect waves-light chip-default">选择排序算法</span>
-            </a>
-            
-            
-            
-            <a href="/tags/python%E7%AE%97%E6%B3%95/">
-                <span class="chip center-align waves-effect waves-light chip-default">python算法</span>
-            </a>
-            
-            
-            
-            <a href="/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                <span class="chip center-align waves-effect waves-light chip-default">python数据结构</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-                <span class="chip center-align waves-effect waves-light chip-default">冒泡排序算法</span>
             </a>
             
             
@@ -890,6 +888,30 @@
             
             
             
+            <a href="/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+                <span class="chip center-align waves-effect waves-light chip-default">冒泡排序算法</span>
+            </a>
+            
+            
+            
+            <a href="/tags/python%E7%AE%97%E6%B3%95/">
+                <span class="chip center-align waves-effect waves-light chip-default">python算法</span>
+            </a>
+            
+            
+            
+            <a href="/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                <span class="chip center-align waves-effect waves-light chip-default">python数据结构</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+                <span class="chip center-align waves-effect waves-light chip-default">选择排序算法</span>
+            </a>
+            
+            
+            
             <a href="/tags/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
                 <span class="chip center-align waves-effect waves-light chip-default">插入排序算法</span>
             </a>
@@ -908,26 +930,26 @@
             
             
             
-            <a href="/tags/Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/">
-                <span class="chip center-align waves-effect waves-light chip-default">Git分支管理</span>
-            </a>
-            
-            
-            
             <a href="/tags/Git%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93/">
                 <span class="chip center-align waves-effect waves-light chip-default">Git创建版本库</span>
             </a>
             
             
             
-            <a href="/tags/Git/">
-                <span class="chip center-align waves-effect waves-light chip-default">Git</span>
+            <a href="/tags/Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/">
+                <span class="chip center-align waves-effect waves-light chip-default">Git分支管理</span>
             </a>
             
             
             
             <a href="/tags/Git%E8%BF%9C%E7%A8%8B%E5%BA%93%E5%92%8C%E6%9C%AC%E5%9C%B0%E5%BA%93/">
                 <span class="chip center-align waves-effect waves-light chip-default">Git远程库和本地库</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Git/">
+                <span class="chip center-align waves-effect waves-light chip-default">Git</span>
             </a>
             
             
