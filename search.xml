@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>python编译exe文件</title>
+      <link href="posts/65f8480c.html"/>
+      <url>posts/65f8480c.html</url>
+      
+        <content type="html"><![CDATA[<h2><span id="目的描述">目的描述</span></h2><p>为了让没有安装Python的人也能使用我们编写的.py文件，我们需要将编写好的Python程序生成.exe文件。</p><h2><span id="下载pyinstaller">下载pyinstaller</span></h2><p>pyinstaller插件是Python自带的插件，用于为我们写好的代码进行打包，最终自动合成.exe文件。</p><p>在Pycharm界面的最下面，你可以看到Terminal，选择这个选项，这就是一个终端界面。</p><p><img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/20210225221218.png" alt="安装pyinsatller"></p><p>在此界面写输入指令： <strong>pip install pyinstaller</strong> 对pyinstaller进行下载。</p><p>常见错误解决方案：</p><ol><li>错误：<code>You are using pip version 10.0.1, however version 20.0.2 is available. You should consider upgrading via the ‘python -m pip install --upgrade pip’ command. </code>解决方案：升级pip，输入指令：‘python -m pip install –upgrade pip’</li><li>错误：<code>使用指令 python -m pip install --upgrade pip 升级pip时，Pycharm报错：AttributeError: ‘NoneType’ object has no attribute ‘bytes’</code>.解决方案: 输入指令：easy_install -U pip</li></ol><h2><span id="使用pyinstaller">使用pyinstaller</span></h2><p>在终端里输入的指令为： <code>pyinstaller -w -F XXX.py</code></p><p>但是对于初学者来说，这里要解释的东西很多：<br>-w：表示希望在生成的.exe程序运行过程中，不要出现cmd黑框（就是图中的黑框）（注意：小写！）</p><p><img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/a181c493b7995748a52cfb4a7b655f96.png" alt="黑框"></p><p>-F：表示希望将所有的程序全部打包在一起，生成的只有一个.exe文件，这样的文件集成度高，但是运行速度慢；如果不写-F，生成的还有一堆.dll文件，这样的程序里文件很多，但是运行速度比较快，这也是我们平时使用的程序的样式（如图）（注意：大写！）</p><p><img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/211efd15cfc51a2d6b2681d2f1d9053e.png" alt="不写-F的情况"></p><p>XXX.py：指的是你整个项目的入口程序，大家写项目时很可能是多文件编程，你整个项目时靠哪个文件作为入口拉起来的，就填那个文件的名字。</p><p>常见问题以及解决方案</p><p>问题：<code>ValueError: script ‘C:\Users\Administrator.XXX.py’ not found</code>指的是找不到XXX.py这个程序</p><p>解决办法：pyinstaller找文件的方法是看你建立的那个工程文件夹里有没有你写进去的文件，而不是看子文件夹里有没有。如果您是在子文件夹中写程序，可以把你写的所有程序都拷贝到工程文件夹中。如果你在代码中导入了图片、文档等与路径相关的文件，注意修改路径。</p><h2><span id="找到生成的exe文件">找到生成的.exe文件</span></h2><p>没看见就对了，因为.exe文件根本不在工程文件夹下面。运行pyinstaller -w -F XXX.py指令后，会生成两个文件夹：一个叫build，另一个叫dist。<br><img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/741a8b293dd7ebceb7775350577a9d44.png" alt="文件夹展示"><br>点开dist文件夹，里面会有一个用你填进去的XXX命名的文件夹，再点进去，你就会看到XXX.exe文件。<br><img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/6c1299f8cca49fc893ba787a49a4ed43.png" alt="文件夹展示"><br>理论上你已经生成了.exe可执行文件，这样就完成了。如果你的.exe文件可以运行起来，那么恭喜你！但是实施情况是，这个.exe文件运行起来很有可能会有各种各样奇葩的问题：比如闪退、双击后直接消失了、程序莫名其妙地崩掉等。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python编译exe文件 </tag>
+            
+            <tag> python第三方库使用 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>多人协作开发</title>
       <link href="posts/11c5853f.html"/>
       <url>posts/11c5853f.html</url>
@@ -353,11 +380,11 @@
       
         <tags>
             
+            <tag> 选择排序算法 </tag>
+            
             <tag> python算法 </tag>
             
             <tag> python数据结构 </tag>
-            
-            <tag> 选择排序算法 </tag>
             
         </tags>
       
@@ -382,11 +409,11 @@
       
         <tags>
             
-            <tag> 冒泡排序算法 </tag>
-            
             <tag> python算法 </tag>
             
             <tag> python数据结构 </tag>
+            
+            <tag> 冒泡排序算法 </tag>
             
         </tags>
       

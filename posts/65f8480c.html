@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="远程库和本地库, Python AI Hadoop Hbase MapReduce">
+    <meta name="keywords" content="python编译exe文件, Python AI Hadoop Hbase MapReduce">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>远程库和本地库 | 啵啵</title>
+    <title>python编译exe文件 | 啵啵</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/shage-sg/CDN/themes/source/libs/awesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/shage-sg/CDN/themes/source/libs/materialize/materialize.min.css">
@@ -360,12 +360,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/git.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">远程库和本地库</h1>
+                    <h1 class="description center-align post-title">python编译exe文件</h1>
                 </div>
             </div>
         </div>
@@ -486,8 +486,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Git%E8%BF%9C%E7%A8%8B%E5%BA%93%E5%92%8C%E6%9C%AC%E5%9C%B0%E5%BA%93/">
-                                <span class="chip bg-color">Git远程库和本地库</span>
+                            <a href="/tags/python%E7%BC%96%E8%AF%91exe%E6%96%87%E4%BB%B6/">
+                                <span class="chip bg-color">python编译exe文件</span>
+                            </a>
+                        
+                            <a href="/tags/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%BD%BF%E7%94%A8/">
+                                <span class="chip bg-color">python第三方库使用</span>
                             </a>
                         
                     </div>
@@ -498,8 +502,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Git/" class="post-category">
-                                Git
+                            <a href="/categories/python/" class="post-category">
+                                python
                             </a>
                         
                     </div>
@@ -511,28 +515,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-24
+                    2021-02-25
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-24
+                    2021-02-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    642
+                    773
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
 
@@ -555,77 +559,26 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Git是分布式版本控制系统，同一个Git仓库，可以分布到不同的机器上。<br>    github网站就是提供Git仓库托管服务的，所以，只要注册一个GitHub账号，就可以免费获得Git远程仓库。</p>
-<pre><code>github官网：https://github.com/</code></pre>
-<h4><span id="远程库">远程库</span></h4><pre><code>1. github版本库即为远程库。</code></pre>
-<h4><span id="本地库">本地库</span></h4><pre><code>1. 本地创建的Git版本库即为本地库。</code></pre>
-<h4><span id="使用说明">使用说明</span></h4><pre><code>1. 先在github官网中注册账户。
-2. 创建SSH key。
-    由于你的本地Git仓库和GitHub仓库之间的传输是通过SSH加密的。
-    Windows下打开Git Bash，创建SSH key。
-    $ ssh-keygen -t rsa -C "youremail@example.com"
-
-3. 在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件（密钥对）。
-    用户主目录：C:\Users\Administrator
-
-4. 登陆GitHub，打开"Account settings"，"SSH Keys"页面。
-
-5. 点"Add SSH Key"，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容。</code></pre>
-<p>​     </p>
-<h4><span id="本地库-关联-远程库">本地库 关联 远程库</span></h4><pre><code>origin:默认远程库名称</code></pre>
-<pre class="line-numbers language-none"><code class="language-none"># 在本地库当前分支
-    $ git remote add origin git@github.com:pythonde/newRepository.git
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h4><span id="上传数据到远程库">上传数据到远程库</span></h4><pre class="line-numbers language-none"><code class="language-none">$ git push -u origin dev
-The authenticity of host 'github.com (13.250.177.223)' can't be established.
-RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
-Are you sure you want to continue connecting (yes/no)? yes
-
-Warning: Permanently added 'github.com,13.250.177.223' (RSA) to the list of known hosts.
-To github.com:pythonde/newRepository.git
- ! [rejected]        master -&gt; master (fetch first)
-error: failed to push some refs to 'git@github.com:pythonde/newRepository.git'
-hint: Updates were rejected because the remote contains work that you do
-hint: not have locally. This is usually caused by another repository pushing
-hint: to the same ref. You may want to first integrate the remote changes
-hint: (e.g., 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4><span id="远程库更新本地库">远程库更新本地库</span></h4><pre class="line-numbers language-none"><code class="language-none">$ git pull --rebase origin dev
-
-From github.com:pythonde/newRepository
- * branch            dev        -&gt; FETCH_HEAD
-First, rewinding head to replay your work on top of it...
-Applying: first add
-Applying: dev second
-Applying: test2 dev third
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4><span id="成功将本地库内容上传到远程库">成功将本地库内容上传到远程库</span></h4><pre class="line-numbers language-none"><code class="language-none">$ git push -u origin dev
-
-Counting objects: 9, done.
-Delta compression using up to 4 threads.
-Compressing objects: 100% (7/7), done.
-Writing objects: 100% (9/9), 852 bytes | 852.00 KiB/s, done.
-Total 9 (delta 0), reused 0 (delta 0)
-To github.com:pythonde/newRepository.git
-   a69bffd..da7dd11  dev -&gt; dev
-Branch 'dev' set up to track remote branch 'dev' from 'origin'.
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4><span id="注意事项">注意事项</span></h4><pre><code>1. 远程操作git push / git pull 时，本地库和远程库分支名相同。
-2. 第一次push时：$ git push -u origin dev
-3. 之后只需要简写：$ git push  origin dev
-4. 远程库分支之间的合并，创建一个pull request进行合并。</code></pre>
-<h4><span id="查看远程库信息">查看远程库信息</span></h4><pre><code>$ git remote -v </code></pre>
-<h4><span id="删除连接远程库">删除连接远程库</span></h4><pre><code>$ git remote rm origin</code></pre>
-<h4><span id="从远程库下载源码到本地库">从远程库下载源码到本地库</span></h4><pre><code>$ git clone git@github.com:pythonde/newRepository.git</code></pre>
-<p>​    </p>
-<p>​<br>​</p>
+                <h2><span id="目的描述">目的描述</span></h2><p>为了让没有安装Python的人也能使用我们编写的.py文件，我们需要将编写好的Python程序生成.exe文件。</p>
+<h2><span id="下载pyinstaller">下载pyinstaller</span></h2><p>pyinstaller插件是Python自带的插件，用于为我们写好的代码进行打包，最终自动合成.exe文件。</p>
+<p>在Pycharm界面的最下面，你可以看到Terminal，选择这个选项，这就是一个终端界面。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/20210225221218.png" alt="安装pyinsatller"></p>
+<p>在此界面写输入指令： <strong>pip install pyinstaller</strong> 对pyinstaller进行下载。</p>
+<p>常见错误解决方案：</p>
+<ol>
+<li>错误：<code>You are using pip version 10.0.1, however version 20.0.2 is available. You should consider upgrading via the ‘python -m pip install --upgrade pip’ command. </code>解决方案：升级pip，输入指令：‘python -m pip install –upgrade pip’</li>
+<li>错误：<code>使用指令 python -m pip install --upgrade pip 升级pip时，Pycharm报错：AttributeError: ‘NoneType’ object has no attribute ‘bytes’</code>.解决方案: 输入指令：easy_install -U pip</li>
+</ol>
+<h2><span id="使用pyinstaller">使用pyinstaller</span></h2><p>在终端里输入的指令为： <code>pyinstaller -w -F XXX.py</code></p>
+<p>但是对于初学者来说，这里要解释的东西很多：<br>-w：表示希望在生成的.exe程序运行过程中，不要出现cmd黑框（就是图中的黑框）（注意：小写！）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/a181c493b7995748a52cfb4a7b655f96.png" alt="黑框"></p>
+<p>-F：表示希望将所有的程序全部打包在一起，生成的只有一个.exe文件，这样的文件集成度高，但是运行速度慢；如果不写-F，生成的还有一堆.dll文件，这样的程序里文件很多，但是运行速度比较快，这也是我们平时使用的程序的样式（如图）（注意：大写！）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/211efd15cfc51a2d6b2681d2f1d9053e.png" alt="不写-F的情况"></p>
+<p>XXX.py：指的是你整个项目的入口程序，大家写项目时很可能是多文件编程，你整个项目时靠哪个文件作为入口拉起来的，就填那个文件的名字。</p>
+<p>常见问题以及解决方案</p>
+<p>问题：<code>ValueError: script ‘C:\Users\Administrator.XXX.py’ not found</code>指的是找不到XXX.py这个程序</p>
+<p>解决办法：pyinstaller找文件的方法是看你建立的那个工程文件夹里有没有你写进去的文件，而不是看子文件夹里有没有。如果您是在子文件夹中写程序，可以把你写的所有程序都拷贝到工程文件夹中。如果你在代码中导入了图片、文档等与路径相关的文件，注意修改路径。</p>
+<h2><span id="找到生成的exe文件">找到生成的.exe文件</span></h2><p>没看见就对了，因为.exe文件根本不在工程文件夹下面。运行pyinstaller -w -F XXX.py指令后，会生成两个文件夹：一个叫build，另一个叫dist。<br><img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/741a8b293dd7ebceb7775350577a9d44.png" alt="文件夹展示"><br>点开dist文件夹，里面会有一个用你填进去的XXX命名的文件夹，再点进去，你就会看到XXX.exe文件。<br><img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/6c1299f8cca49fc893ba787a49a4ed43.png" alt="文件夹展示"><br>理论上你已经生成了.exe可执行文件，这样就完成了。如果你的.exe文件可以运行起来，那么恭喜你！但是实施情况是，这个.exe文件运行起来很有可能会有各种各样奇葩的问题：比如闪退、双击后直接消失了、程序莫名其妙地崩掉等。</p>
 
                 
             </div>
@@ -652,7 +605,7 @@ Branch 'dev' set up to track remote branch 'dev' from 'origin'.
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.bulingling.top/posts/8a4a6d1e.html">https://www.bulingling.top/posts/8a4a6d1e.html</a>
+                    <a href="https://www.bulingling.top/posts/65f8480c.html">https://www.bulingling.top/posts/65f8480c.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -690,8 +643,12 @@ Branch 'dev' set up to track remote branch 'dev' from 'origin'.
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Git%E8%BF%9C%E7%A8%8B%E5%BA%93%E5%92%8C%E6%9C%AC%E5%9C%B0%E5%BA%93/">
-                                    <span class="chip bg-color">Git远程库和本地库</span>
+                                <a href="/tags/python%E7%BC%96%E8%AF%91exe%E6%96%87%E4%BB%B6/">
+                                    <span class="chip bg-color">python编译exe文件</span>
+                                </a>
+                            
+                                <a href="/tags/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%BD%BF%E7%94%A8/">
+                                    <span class="chip bg-color">python第三方库使用</span>
                                 </a>
                             
                         </div>
@@ -1268,45 +1225,52 @@ let metaPlaceholder = {"nick":"昵称(必填最少三个字)","mail":"QQ邮箱(�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/558409fe.html">
+                <a href="/posts/65f8480c.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/git.png" class="responsive-img" alt="Git多协议方式">
                         
-                        <span class="card-title">Git多协议方式</span>
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="python编译exe文件">
+                        
+                        <span class="card-title">python编译exe文件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Git多协议方式
+                            Python如何生成exe文件？用Pycharm一步一步带着你学(超详细、超贴心)
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Git/" class="post-category">
-                                    Git
+                            <a href="/categories/python/" class="post-category">
+                                    python
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Git%E5%A4%9A%E5%8D%8F%E8%AE%AE%E6%96%B9%E5%BC%8F/">
-                        <span class="chip bg-color">Git多协议方式</span>
+                    <a href="/tags/python%E7%BC%96%E8%AF%91exe%E6%96%87%E4%BB%B6/">
+                        <span class="chip bg-color">python编译exe文件</span>
+                    </a>
+                    
+                    <a href="/tags/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%BD%BF%E7%94%A8/">
+                        <span class="chip bg-color">python第三方库使用</span>
                     </a>
                     
                 </div>
@@ -1320,18 +1284,18 @@ let metaPlaceholder = {"nick":"昵称(必填最少三个字)","mail":"QQ邮箱(�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/3669e061.html">
+                <a href="/posts/11c5853f.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/git.png" class="responsive-img" alt="分支管理">
+                        <img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/git.png" class="responsive-img" alt="多人协作开发">
                         
-                        <span class="card-title">分支管理</span>
+                        <span class="card-title">多人协作开发</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Git分支管理
+                            Git多人协作开发
                         
                     </div>
                     <div class="publish-info">
@@ -1353,8 +1317,8 @@ let metaPlaceholder = {"nick":"昵称(必填最少三个字)","mail":"QQ邮箱(�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/">
-                        <span class="chip bg-color">Git分支管理</span>
+                    <a href="/tags/Git/">
+                        <span class="chip bg-color">Git</span>
                     </a>
                     
                 </div>

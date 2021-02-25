@@ -6,7 +6,7 @@
   <link href="https://www.bulingling.top/atom.xml" rel="self"/>
   
   <link href="https://www.bulingling.top/"/>
-  <updated>2021-02-24T07:30:56.799Z</updated>
+  <updated>2021-02-25T14:28:29.731Z</updated>
   <id>https://www.bulingling.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python编译exe文件</title>
+    <link href="https://www.bulingling.top/posts/65f8480c.html"/>
+    <id>https://www.bulingling.top/posts/65f8480c.html</id>
+    <published>2021-02-25T14:00:11.000Z</published>
+    <updated>2021-02-25T14:28:29.731Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2&gt;&lt;span id=&quot;目的描述&quot;&gt;目的描述&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;为了让没有安装Python的人也能使用我们编写的.py文件，我们需要将编写好的Python程序生成.exe文件。&lt;/p&gt;
+&lt;h2&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="https://www.bulingling.top/categories/python/"/>
+    
+    
+    <category term="python编译exe文件" scheme="https://www.bulingling.top/tags/python%E7%BC%96%E8%AF%91exe%E6%96%87%E4%BB%B6/"/>
+    
+    <category term="python第三方库使用" scheme="https://www.bulingling.top/tags/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%BD%BF%E7%94%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>多人协作开发</title>
@@ -387,11 +415,11 @@
     <category term="算法" scheme="https://www.bulingling.top/categories/%E7%AE%97%E6%B3%95/"/>
     
     
+    <category term="选择排序算法" scheme="https://www.bulingling.top/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    
     <category term="python算法" scheme="https://www.bulingling.top/tags/python%E7%AE%97%E6%B3%95/"/>
     
     <category term="python数据结构" scheme="https://www.bulingling.top/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    <category term="选择排序算法" scheme="https://www.bulingling.top/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -416,11 +444,11 @@
     <category term="算法" scheme="https://www.bulingling.top/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="冒泡排序算法" scheme="https://www.bulingling.top/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
-    
     <category term="python算法" scheme="https://www.bulingling.top/tags/python%E7%AE%97%E6%B3%95/"/>
     
     <category term="python数据结构" scheme="https://www.bulingling.top/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="冒泡排序算法" scheme="https://www.bulingling.top/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
