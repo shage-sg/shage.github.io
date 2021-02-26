@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>啵啵</title>
-  <icon>https://bulingling.top/icon.png</icon>
+  <icon>https://www.bulingling.top/icon.png</icon>
   <subtitle>每日一诗</subtitle>
-  <link href="https://bulingling.top/atom.xml" rel="self"/>
+  <link href="https://www.bulingling.top/atom.xml" rel="self"/>
   
-  <link href="https://bulingling.top/"/>
-  <updated>2021-02-25T14:29:01.774Z</updated>
-  <id>https://bulingling.top/</id>
+  <link href="https://www.bulingling.top/"/>
+  <updated>2021-02-26T13:34:19.451Z</updated>
+  <id>https://www.bulingling.top/</id>
   
   <author>
     <name>bobo</name>
@@ -17,9 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>十分钟搞定pandas</title>
+    <link href="https://www.bulingling.top/posts/158338ef.html"/>
+    <id>https://www.bulingling.top/posts/158338ef.html</id>
+    <published>2021-02-26T12:50:19.000Z</published>
+    <updated>2021-02-26T13:34:19.451Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2&gt;&lt;span id=&quot;模块导入&quot;&gt;模块导入&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;首先要学会导入模块，我们会按下面的格式引入所需要的库&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-python&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="pandas" scheme="https://www.bulingling.top/categories/pandas/"/>
+    
+    
+    <category term="pandas入门" scheme="https://www.bulingling.top/tags/pandas%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>python编译exe文件</title>
-    <link href="https://bulingling.top/posts/65f8480c.html"/>
-    <id>https://bulingling.top/posts/65f8480c.html</id>
+    <link href="https://www.bulingling.top/posts/65f8480c.html"/>
+    <id>https://www.bulingling.top/posts/65f8480c.html</id>
     <published>2021-02-25T14:00:11.000Z</published>
     <updated>2021-02-25T14:29:01.774Z</updated>
     
@@ -35,19 +61,19 @@
     
     
     
-    <category term="python" scheme="https://bulingling.top/categories/python/"/>
+    <category term="python" scheme="https://www.bulingling.top/categories/python/"/>
     
     
-    <category term="python编译exe文件" scheme="https://bulingling.top/tags/python%E7%BC%96%E8%AF%91exe%E6%96%87%E4%BB%B6/"/>
+    <category term="python编译exe文件" scheme="https://www.bulingling.top/tags/python%E7%BC%96%E8%AF%91exe%E6%96%87%E4%BB%B6/"/>
     
-    <category term="python第三方库使用" scheme="https://bulingling.top/tags/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%BD%BF%E7%94%A8/"/>
+    <category term="python第三方库使用" scheme="https://www.bulingling.top/tags/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%BD%BF%E7%94%A8/"/>
     
   </entry>
   
   <entry>
     <title>多人协作开发</title>
-    <link href="https://bulingling.top/posts/11c5853f.html"/>
-    <id>https://bulingling.top/posts/11c5853f.html</id>
+    <link href="https://www.bulingling.top/posts/11c5853f.html"/>
+    <id>https://www.bulingling.top/posts/11c5853f.html</id>
     <published>2021-02-24T07:10:34.000Z</published>
     <updated>2021-02-24T07:30:56.799Z</updated>
     
@@ -65,17 +91,17 @@
     
     
     
-    <category term="Git" scheme="https://bulingling.top/categories/Git/"/>
+    <category term="Git" scheme="https://www.bulingling.top/categories/Git/"/>
     
     
-    <category term="Git" scheme="https://bulingling.top/tags/Git/"/>
+    <category term="Git" scheme="https://www.bulingling.top/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>Git多协议方式</title>
-    <link href="https://bulingling.top/posts/558409fe.html"/>
-    <id>https://bulingling.top/posts/558409fe.html</id>
+    <link href="https://www.bulingling.top/posts/558409fe.html"/>
+    <id>https://www.bulingling.top/posts/558409fe.html</id>
     <published>2021-02-24T07:09:25.000Z</published>
     <updated>2021-02-24T07:11:49.548Z</updated>
     
@@ -90,17 +116,17 @@
     
     
     
-    <category term="Git" scheme="https://bulingling.top/categories/Git/"/>
+    <category term="Git" scheme="https://www.bulingling.top/categories/Git/"/>
     
     
-    <category term="Git多协议方式" scheme="https://bulingling.top/tags/Git%E5%A4%9A%E5%8D%8F%E8%AE%AE%E6%96%B9%E5%BC%8F/"/>
+    <category term="Git多协议方式" scheme="https://www.bulingling.top/tags/Git%E5%A4%9A%E5%8D%8F%E8%AE%AE%E6%96%B9%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>远程库和本地库</title>
-    <link href="https://bulingling.top/posts/8a4a6d1e.html"/>
-    <id>https://bulingling.top/posts/8a4a6d1e.html</id>
+    <link href="https://www.bulingling.top/posts/8a4a6d1e.html"/>
+    <id>https://www.bulingling.top/posts/8a4a6d1e.html</id>
     <published>2021-02-24T07:07:12.000Z</published>
     <updated>2021-02-24T07:08:28.093Z</updated>
     
@@ -115,17 +141,17 @@
     
     
     
-    <category term="Git" scheme="https://bulingling.top/categories/Git/"/>
+    <category term="Git" scheme="https://www.bulingling.top/categories/Git/"/>
     
     
-    <category term="Git远程库和本地库" scheme="https://bulingling.top/tags/Git%E8%BF%9C%E7%A8%8B%E5%BA%93%E5%92%8C%E6%9C%AC%E5%9C%B0%E5%BA%93/"/>
+    <category term="Git远程库和本地库" scheme="https://www.bulingling.top/tags/Git%E8%BF%9C%E7%A8%8B%E5%BA%93%E5%92%8C%E6%9C%AC%E5%9C%B0%E5%BA%93/"/>
     
   </entry>
   
   <entry>
     <title>分支管理</title>
-    <link href="https://bulingling.top/posts/3669e061.html"/>
-    <id>https://bulingling.top/posts/3669e061.html</id>
+    <link href="https://www.bulingling.top/posts/3669e061.html"/>
+    <id>https://www.bulingling.top/posts/3669e061.html</id>
     <published>2021-02-24T07:05:45.000Z</published>
     <updated>2021-02-24T07:08:28.092Z</updated>
     
@@ -141,17 +167,17 @@
     
     
     
-    <category term="Git" scheme="https://bulingling.top/categories/Git/"/>
+    <category term="Git" scheme="https://www.bulingling.top/categories/Git/"/>
     
     
-    <category term="Git分支管理" scheme="https://bulingling.top/tags/Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/"/>
+    <category term="Git分支管理" scheme="https://www.bulingling.top/tags/Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>Git常用命令</title>
-    <link href="https://bulingling.top/posts/caff8000.html"/>
-    <id>https://bulingling.top/posts/caff8000.html</id>
+    <link href="https://www.bulingling.top/posts/caff8000.html"/>
+    <id>https://www.bulingling.top/posts/caff8000.html</id>
     <published>2021-02-24T07:03:19.000Z</published>
     <updated>2021-02-24T07:08:28.095Z</updated>
     
@@ -167,17 +193,17 @@
     
     
     
-    <category term="Git" scheme="https://bulingling.top/categories/Git/"/>
+    <category term="Git" scheme="https://www.bulingling.top/categories/Git/"/>
     
     
-    <category term="Git常用命令" scheme="https://bulingling.top/tags/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <category term="Git常用命令" scheme="https://www.bulingling.top/tags/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   
   <entry>
     <title>创建版本库</title>
-    <link href="https://bulingling.top/posts/3ca287b3.html"/>
-    <id>https://bulingling.top/posts/3ca287b3.html</id>
+    <link href="https://www.bulingling.top/posts/3ca287b3.html"/>
+    <id>https://www.bulingling.top/posts/3ca287b3.html</id>
     <published>2021-02-24T07:01:16.000Z</published>
     <updated>2021-02-24T07:08:28.096Z</updated>
     
@@ -196,17 +222,17 @@
     
     
     
-    <category term="Git" scheme="https://bulingling.top/categories/Git/"/>
+    <category term="Git" scheme="https://www.bulingling.top/categories/Git/"/>
     
     
-    <category term="Git创建版本库" scheme="https://bulingling.top/tags/Git%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93/"/>
+    <category term="Git创建版本库" scheme="https://www.bulingling.top/tags/Git%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93/"/>
     
   </entry>
   
   <entry>
     <title>Git名词解释</title>
-    <link href="https://bulingling.top/posts/6725a818.html"/>
-    <id>https://bulingling.top/posts/6725a818.html</id>
+    <link href="https://www.bulingling.top/posts/6725a818.html"/>
+    <id>https://www.bulingling.top/posts/6725a818.html</id>
     <published>2021-02-24T06:53:21.000Z</published>
     <updated>2021-02-24T07:08:28.090Z</updated>
     
@@ -222,17 +248,17 @@
     
     
     
-    <category term="Git" scheme="https://bulingling.top/categories/Git/"/>
+    <category term="Git" scheme="https://www.bulingling.top/categories/Git/"/>
     
     
-    <category term="Git名词解释" scheme="https://bulingling.top/tags/Git%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/"/>
+    <category term="Git名词解释" scheme="https://www.bulingling.top/tags/Git%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/"/>
     
   </entry>
   
   <entry>
     <title>Git下载和安装</title>
-    <link href="https://bulingling.top/posts/aadc9cb4.html"/>
-    <id>https://bulingling.top/posts/aadc9cb4.html</id>
+    <link href="https://www.bulingling.top/posts/aadc9cb4.html"/>
+    <id>https://www.bulingling.top/posts/aadc9cb4.html</id>
     <published>2021-02-24T06:52:06.000Z</published>
     <updated>2021-02-24T07:08:28.089Z</updated>
     
@@ -248,17 +274,17 @@
     
     
     
-    <category term="Git" scheme="https://bulingling.top/categories/Git/"/>
+    <category term="Git" scheme="https://www.bulingling.top/categories/Git/"/>
     
     
-    <category term="Git下载和安装" scheme="https://bulingling.top/tags/Git%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85/"/>
+    <category term="Git下载和安装" scheme="https://www.bulingling.top/tags/Git%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85/"/>
     
   </entry>
   
   <entry>
     <title>集中式和分布式</title>
-    <link href="https://bulingling.top/posts/7ee53739.html"/>
-    <id>https://bulingling.top/posts/7ee53739.html</id>
+    <link href="https://www.bulingling.top/posts/7ee53739.html"/>
+    <id>https://www.bulingling.top/posts/7ee53739.html</id>
     <published>2021-02-24T06:50:00.000Z</published>
     <updated>2021-02-24T07:08:28.098Z</updated>
     
@@ -273,17 +299,17 @@
     
     
     
-    <category term="Git" scheme="https://bulingling.top/categories/Git/"/>
+    <category term="Git" scheme="https://www.bulingling.top/categories/Git/"/>
     
     
-    <category term="集中式和分布式开发" scheme="https://bulingling.top/tags/%E9%9B%86%E4%B8%AD%E5%BC%8F%E5%92%8C%E5%88%86%E5%B8%83%E5%BC%8F%E5%BC%80%E5%8F%91/"/>
+    <category term="集中式和分布式开发" scheme="https://www.bulingling.top/tags/%E9%9B%86%E4%B8%AD%E5%BC%8F%E5%92%8C%E5%88%86%E5%B8%83%E5%BC%8F%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
   <entry>
     <title>Git_简介</title>
-    <link href="https://bulingling.top/posts/6814ac35.html"/>
-    <id>https://bulingling.top/posts/6814ac35.html</id>
+    <link href="https://www.bulingling.top/posts/6814ac35.html"/>
+    <id>https://www.bulingling.top/posts/6814ac35.html</id>
     <published>2021-02-24T06:40:40.000Z</published>
     <updated>2021-02-24T07:08:28.094Z</updated>
     
@@ -299,17 +325,17 @@
     
     
     
-    <category term="Git" scheme="https://bulingling.top/categories/Git/"/>
+    <category term="Git" scheme="https://www.bulingling.top/categories/Git/"/>
     
     
-    <category term="Git简介" scheme="https://bulingling.top/tags/Git%E7%AE%80%E4%BB%8B/"/>
+    <category term="Git简介" scheme="https://www.bulingling.top/tags/Git%E7%AE%80%E4%BB%8B/"/>
     
   </entry>
   
   <entry>
     <title>PyCharm永久破解方法</title>
-    <link href="https://bulingling.top/posts/75f55e54.html"/>
-    <id>https://bulingling.top/posts/75f55e54.html</id>
+    <link href="https://www.bulingling.top/posts/75f55e54.html"/>
+    <id>https://www.bulingling.top/posts/75f55e54.html</id>
     <published>2021-02-20T06:57:34.000Z</published>
     <updated>2021-02-20T08:54:45.548Z</updated>
     
@@ -325,17 +351,17 @@
     
     
     
-    <category term="PyCharm永久破解方法" scheme="https://bulingling.top/categories/PyCharm%E6%B0%B8%E4%B9%85%E7%A0%B4%E8%A7%A3%E6%96%B9%E6%B3%95/"/>
+    <category term="PyCharm永久破解方法" scheme="https://www.bulingling.top/categories/PyCharm%E6%B0%B8%E4%B9%85%E7%A0%B4%E8%A7%A3%E6%96%B9%E6%B3%95/"/>
     
     
-    <category term="PyCharm永久破解方法" scheme="https://bulingling.top/tags/PyCharm%E6%B0%B8%E4%B9%85%E7%A0%B4%E8%A7%A3%E6%96%B9%E6%B3%95/"/>
+    <category term="PyCharm永久破解方法" scheme="https://www.bulingling.top/tags/PyCharm%E6%B0%B8%E4%B9%85%E7%A0%B4%E8%A7%A3%E6%96%B9%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>快速排序算法</title>
-    <link href="https://bulingling.top/posts/ff8068c0.html"/>
-    <id>https://bulingling.top/posts/ff8068c0.html</id>
+    <link href="https://www.bulingling.top/posts/ff8068c0.html"/>
+    <id>https://www.bulingling.top/posts/ff8068c0.html</id>
     <published>2021-02-19T08:59:49.000Z</published>
     <updated>2021-02-20T03:21:31.389Z</updated>
     
@@ -350,21 +376,21 @@
     
     
     
-    <category term="算法" scheme="https://bulingling.top/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://www.bulingling.top/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="python算法" scheme="https://bulingling.top/tags/python%E7%AE%97%E6%B3%95/"/>
+    <category term="python算法" scheme="https://www.bulingling.top/tags/python%E7%AE%97%E6%B3%95/"/>
     
-    <category term="python数据结构" scheme="https://bulingling.top/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="python数据结构" scheme="https://www.bulingling.top/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-    <category term="快速排序算法" scheme="https://bulingling.top/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    <category term="快速排序算法" scheme="https://www.bulingling.top/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>插入排序算法</title>
-    <link href="https://bulingling.top/posts/96555fb2.html"/>
-    <id>https://bulingling.top/posts/96555fb2.html</id>
+    <link href="https://www.bulingling.top/posts/96555fb2.html"/>
+    <id>https://www.bulingling.top/posts/96555fb2.html</id>
     <published>2021-02-12T12:35:25.000Z</published>
     <updated>2021-02-20T06:48:21.493Z</updated>
     
@@ -381,21 +407,21 @@
     
     
     
-    <category term="算法" scheme="https://bulingling.top/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://www.bulingling.top/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="python算法" scheme="https://bulingling.top/tags/python%E7%AE%97%E6%B3%95/"/>
+    <category term="python算法" scheme="https://www.bulingling.top/tags/python%E7%AE%97%E6%B3%95/"/>
     
-    <category term="python数据结构" scheme="https://bulingling.top/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="python数据结构" scheme="https://www.bulingling.top/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-    <category term="插入排序算法" scheme="https://bulingling.top/tags/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    <category term="插入排序算法" scheme="https://www.bulingling.top/tags/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>选择排序算法</title>
-    <link href="https://bulingling.top/posts/43d00a99.html"/>
-    <id>https://bulingling.top/posts/43d00a99.html</id>
+    <link href="https://www.bulingling.top/posts/43d00a99.html"/>
+    <id>https://www.bulingling.top/posts/43d00a99.html</id>
     <published>2021-02-11T07:22:49.000Z</published>
     <updated>2021-02-20T06:49:11.602Z</updated>
     
@@ -412,21 +438,21 @@
     
     
     
-    <category term="算法" scheme="https://bulingling.top/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://www.bulingling.top/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="选择排序算法" scheme="https://bulingling.top/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    <category term="选择排序算法" scheme="https://www.bulingling.top/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
     
-    <category term="python算法" scheme="https://bulingling.top/tags/python%E7%AE%97%E6%B3%95/"/>
+    <category term="python算法" scheme="https://www.bulingling.top/tags/python%E7%AE%97%E6%B3%95/"/>
     
-    <category term="python数据结构" scheme="https://bulingling.top/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="python数据结构" scheme="https://www.bulingling.top/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>冒泡排序算法</title>
-    <link href="https://bulingling.top/posts/4d081371.html"/>
-    <id>https://bulingling.top/posts/4d081371.html</id>
+    <link href="https://www.bulingling.top/posts/4d081371.html"/>
+    <id>https://www.bulingling.top/posts/4d081371.html</id>
     <published>2021-02-10T14:13:48.000Z</published>
     <updated>2021-02-20T06:40:03.449Z</updated>
     
@@ -441,21 +467,21 @@
     
     
     
-    <category term="算法" scheme="https://bulingling.top/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://www.bulingling.top/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="python算法" scheme="https://bulingling.top/tags/python%E7%AE%97%E6%B3%95/"/>
+    <category term="python算法" scheme="https://www.bulingling.top/tags/python%E7%AE%97%E6%B3%95/"/>
     
-    <category term="python数据结构" scheme="https://bulingling.top/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="python数据结构" scheme="https://www.bulingling.top/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-    <category term="冒泡排序算法" scheme="https://bulingling.top/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    <category term="冒泡排序算法" scheme="https://www.bulingling.top/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>缓存的穿透、击穿、雪崩</title>
-    <link href="https://bulingling.top/posts/56739dcf.html"/>
-    <id>https://bulingling.top/posts/56739dcf.html</id>
+    <link href="https://www.bulingling.top/posts/56739dcf.html"/>
+    <id>https://www.bulingling.top/posts/56739dcf.html</id>
     <published>2021-02-09T12:48:42.000Z</published>
     <updated>2021-02-23T03:18:10.014Z</updated>
     
@@ -470,14 +496,14 @@
     
     
     
-    <category term="缓存问题" scheme="https://bulingling.top/categories/%E7%BC%93%E5%AD%98%E9%97%AE%E9%A2%98/"/>
+    <category term="缓存问题" scheme="https://www.bulingling.top/categories/%E7%BC%93%E5%AD%98%E9%97%AE%E9%A2%98/"/>
     
     
-    <category term="缓存雪崩" scheme="https://bulingling.top/tags/%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9/"/>
+    <category term="缓存雪崩" scheme="https://www.bulingling.top/tags/%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9/"/>
     
-    <category term="缓存穿透" scheme="https://bulingling.top/tags/%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F/"/>
+    <category term="缓存穿透" scheme="https://www.bulingling.top/tags/%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F/"/>
     
-    <category term="缓存击穿" scheme="https://bulingling.top/tags/%E7%BC%93%E5%AD%98%E5%87%BB%E7%A9%BF/"/>
+    <category term="缓存击穿" scheme="https://www.bulingling.top/tags/%E7%BC%93%E5%AD%98%E5%87%BB%E7%A9%BF/"/>
     
   </entry>
   

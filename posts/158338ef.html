@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="选择排序算法, Python AI Hadoop Hbase MapReduce">
+    <meta name="keywords" content="十分钟搞定pandas, Python AI Hadoop Hbase MapReduce">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>选择排序算法 | 啵啵</title>
+    <title>十分钟搞定pandas | 啵啵</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/shage-sg/CDN/themes/source/libs/awesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/shage-sg/CDN/themes/source/libs/materialize/materialize.min.css">
@@ -360,12 +360,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/bVbswmI')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">选择排序算法</h1>
+                    <h1 class="description center-align post-title">十分钟搞定pandas</h1>
                 </div>
             </div>
         </div>
@@ -486,16 +486,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-                                <span class="chip bg-color">选择排序算法</span>
-                            </a>
-                        
-                            <a href="/tags/python%E7%AE%97%E6%B3%95/">
-                                <span class="chip bg-color">python算法</span>
-                            </a>
-                        
-                            <a href="/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                <span class="chip bg-color">python数据结构</span>
+                            <a href="/tags/pandas%E5%85%A5%E9%97%A8/">
+                                <span class="chip bg-color">pandas入门</span>
                             </a>
                         
                     </div>
@@ -506,8 +498,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                算法
+                            <a href="/categories/pandas/" class="post-category">
+                                pandas
                             </a>
                         
                     </div>
@@ -519,28 +511,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-11
+                    2021-02-26
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-20
+                    2021-02-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    690
+                    780
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -563,71 +555,102 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <center> 在这里bobo预祝大家新年快乐！！</center>
+                <h2><span id="模块导入">模块导入</span></h2><p>首先要学会导入模块，我们会按下面的格式引入所需要的库</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pylot <span class="token keyword">as</span> plt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2><span id="创建对象">创建对象</span></h2><ol>
+<li><p>可以通过传递一个<code>list</code>对象来创建<code>series</code>，<code>pandas</code>会默认创建整形索引。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">s <span class="token operator">=</span> pd<span class="token punctuation">.</span>Series<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span>np<span class="token punctuation">.</span>nan<span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
 
-<h1><span id="python选择排序算法">Python选择排序算法</span></h1><h2><span id="一-选择排序算法的基本思想">一  . 选择排序算法的基本思想</span></h2><ol>
-<li><p>一趟排序记录最小的数，放到第一个位置。</p>
+<span class="token comment"># 结果</span>
+<span class="token number">0</span>    <span class="token number">1.0</span>
+<span class="token number">1</span>    <span class="token number">3.0</span>
+<span class="token number">2</span>    <span class="token number">5.0</span>
+<span class="token number">3</span>    NaN
+<span class="token number">4</span>    <span class="token number">6.0</span>
+<span class="token number">5</span>    <span class="token number">8.0</span>
+dtype<span class="token punctuation">:</span> float64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li><p>通过传递一个<code>numpy array</code>,时间索引以及列标签来创建一个<code>DataFrame</code>。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 时间</span>
+dates <span class="token operator">=</span> pd<span class="token punctuation">.</span>date_range<span class="token punctuation">(</span><span class="token string">'20130101'</span><span class="token punctuation">,</span>periods<span class="token operator">=</span><span class="token number">6</span><span class="token punctuation">)</span>
+
+<span class="token comment"># randn函数返回一个或一组样本，具有标准正态分布。</span>
+df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span>index<span class="token operator">=</span>dates<span class="token punctuation">,</span>columns<span class="token operator">=</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token string">'ABCD'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 结果</span>
+                   A         B         C         D
+<span class="token number">2013</span><span class="token operator">-</span><span class="token number">01</span><span class="token operator">-</span><span class="token number">01</span>  <span class="token number">1.471985</span> <span class="token operator">-</span><span class="token number">0.406890</span> <span class="token operator">-</span><span class="token number">0.750888</span>  <span class="token number">0.097701</span>
+<span class="token number">2013</span><span class="token operator">-</span><span class="token number">01</span><span class="token operator">-</span><span class="token number">02</span>  <span class="token number">0.936148</span> <span class="token operator">-</span><span class="token number">0.611786</span>  <span class="token number">0.874373</span>  <span class="token number">0.686399</span>
+<span class="token number">2013</span><span class="token operator">-</span><span class="token number">01</span><span class="token operator">-</span><span class="token number">03</span> <span class="token operator">-</span><span class="token number">0.422098</span>  <span class="token number">0.181850</span>  <span class="token number">0.769788</span>  <span class="token number">1.248009</span>
+<span class="token number">2013</span><span class="token operator">-</span><span class="token number">01</span><span class="token operator">-</span><span class="token number">04</span>  <span class="token number">0.063412</span>  <span class="token number">0.573801</span> <span class="token operator">-</span><span class="token number">0.168527</span> <span class="token operator">-</span><span class="token number">0.428844</span>
+<span class="token number">2013</span><span class="token operator">-</span><span class="token number">01</span><span class="token operator">-</span><span class="token number">05</span> <span class="token operator">-</span><span class="token number">0.143370</span>  <span class="token number">0.649602</span>  <span class="token number">1.022139</span>  <span class="token number">1.095653</span>
+<span class="token number">2013</span><span class="token operator">-</span><span class="token number">01</span><span class="token operator">-</span><span class="token number">06</span> <span class="token operator">-</span><span class="token number">0.241681</span> <span class="token operator">-</span><span class="token number">0.466754</span>  <span class="token number">0.012117</span> <span class="token operator">-</span><span class="token number">0.766723</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 </li>
-<li><p>再一趟排序记录列表无序区最小的数，放到第二个位置，直至排序全部依次完成。</p>
-<p>我们来看一张图片</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/bVbswmI" alt="选择排序"></p>
+</ol>
+<ol start="3">
+<li><p>通过传递一个能够被转换成类似序列结构的字典对象来创建一个<code>DataFrame</code>。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># dict</span>
+df2 <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'A'</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span>
+                    <span class="token string">'B'</span><span class="token punctuation">:</span>pd<span class="token punctuation">.</span>Timestamp<span class="token punctuation">(</span><span class="token string">'20210226'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    <span class="token string">'C'</span><span class="token punctuation">:</span>pd<span class="token punctuation">.</span>Series<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>index<span class="token operator">=</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>dtype<span class="token operator">=</span><span class="token string">'float32'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    <span class="token string">'D'</span><span class="token punctuation">:</span>np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    <span class="token string">'E'</span><span class="token punctuation">:</span>pd<span class="token punctuation">.</span>Categorical<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"test"</span><span class="token punctuation">,</span><span class="token string">"train"</span><span class="token punctuation">,</span><span class="token string">"test"</span><span class="token punctuation">,</span><span class="token string">"train"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    <span class="token string">'F'</span><span class="token punctuation">:</span><span class="token string">'foo'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 结果</span>
+
+     A          B    C  D      E    F
+<span class="token number">0</span>  <span class="token number">1.0</span> <span class="token number">2021</span><span class="token operator">-</span><span class="token number">02</span><span class="token operator">-</span><span class="token number">26</span>  <span class="token number">1.0</span>  <span class="token number">3</span>   test  foo
+<span class="token number">1</span>  <span class="token number">1.0</span> <span class="token number">2021</span><span class="token operator">-</span><span class="token number">02</span><span class="token operator">-</span><span class="token number">26</span>  <span class="token number">1.0</span>  <span class="token number">3</span>  train  foo
+<span class="token number">2</span>  <span class="token number">1.0</span> <span class="token number">2021</span><span class="token operator">-</span><span class="token number">02</span><span class="token operator">-</span><span class="token number">26</span>  <span class="token number">1.0</span>  <span class="token number">3</span>   test  foo
+<span class="token number">3</span>  <span class="token number">1.0</span> <span class="token number">2021</span><span class="token operator">-</span><span class="token number">02</span><span class="token operator">-</span><span class="token number">26</span>  <span class="token number">1.0</span>  <span class="token number">3</span>  train  foo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 </li>
 </ol>
-<hr>
-<h2><span id="二-算法关键点">二 . 算法关键点</span></h2><ol>
-<li> 有序区和无序区。</li>
-<li> 无序区最小数的位置。</li>
+<ol start="4">
+<li><p>查看不同列的数据类型</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>df2<span class="token punctuation">.</span>dtypes<span class="token punctuation">)</span>
+A           float64
+B    datetime64<span class="token punctuation">[</span>ns<span class="token punctuation">]</span>
+C           float32
+D             int32
+E          category
+F            <span class="token builtin">object</span>
+dtype<span class="token punctuation">:</span> <span class="token builtin">object</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2><span id="补充知识点">补充知识点</span></h2></li>
 </ol>
-<hr>
-<h2><span id="三-实现代码">三 . 实现代码</span></h2><p>​    首先看一种比较简单容易理解的选择排序算法思路：</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">select_sort_simple</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    li_new <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        min_value <span class="token operator">=</span> <span class="token builtin">min</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span>
-        li_new<span class="token punctuation">.</span>append<span class="token punctuation">(</span>min_value<span class="token punctuation">)</span>
-        li<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>min_value<span class="token punctuation">)</span>
-    <span class="token keyword">return</span> li_new<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>性能优化前的实现思路：</p>
-<p>​    通过建立两个列表，使用列表的append方法和remove方法实现数据的排序。</p>
-<p>代码弱点：</p>
-<p>​    <code>但是大家可以仔细想一下，这种算法需要开辟两块内存区域来存放列表，一块保存原数据，另一块保存排序后的数据，假如数据量基数比较大时，这无疑是致命。</code></p>
-<p>​    比较难理解但是效率较高的选择排序算法思路：</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">select_sort</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        mic_loc <span class="token operator">=</span> i
-        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> li<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;</span> li<span class="token punctuation">[</span>min_loc<span class="token punctuation">]</span><span class="token punctuation">:</span>
-                min_loc <span class="token operator">=</span> j
-            li<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> li<span class="token punctuation">[</span>min_loc<span class="token punctuation">]</span> <span class="token operator">=</span> li<span class="token punctuation">[</span>min_loc<span class="token punctuation">]</span><span class="token punctuation">,</span> li<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>性能优化后的实现思路：</p>
-<p>​    通过建立单个列表，然后利用列表的下标来替换相对应位置的元素。</p>
-<p>代码讲解：</p>
-<ol>
-<li> 第一层for循环决定选择排序算法的趟数。因为只剩最后一个数时，列表则不需要再次进行排序，所以len(li) - 1。</li>
-<li> min_loc是一个标志位，最小值的下标。默认是无序区的第一个数。</li>
-<li>第二层for循环是无序区相邻两个数进行比较，min_loc标志位保持为较小的数的下标。</li>
-<li>无序区最小值移动到无序区的第一个，此轮循环结束，无序区的个数减一，有序区的个数加一。</li>
-</ol>
-<p>代码优点：</p>
-<p>​    <code>select_sort选择排序算法，只使用了一块内存区域用于存储列表，减小内存的开销。</code></p>
-<p>时间复杂度：</p>
-<p>O(n<sup>2</sup>)</p>
-<h2><span id="四-代码优化">四 . 代码优化</span></h2><p>​    如果无序区的比较一趟之后，第一个数依然是最小的数，则不需要发生位置交换。优化后代码如下：</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">select_sort</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        min_loc <span class="token operator">=</span> i
-        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> li<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;</span> li<span class="token punctuation">[</span>min_loc<span class="token punctuation">]</span><span class="token punctuation">:</span>
-                min_loc <span class="token operator">=</span> j
-        <span class="token keyword">if</span> min_loc <span class="token operator">!=</span> i<span class="token punctuation">:</span>
-            li<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> li<span class="token punctuation">[</span>min_loc<span class="token punctuation">]</span> <span class="token operator">=</span> li<span class="token punctuation">[</span>min_loc<span class="token punctuation">]</span><span class="token punctuation">,</span> li<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2><span id="五-运行测试">五 . 运行测试</span></h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">li <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"要排序的列表:{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span>
-select_sort<span class="token punctuation">(</span>li<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"排序后的列表:{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token comment"># 结果：</span>
-<span class="token comment"># 要排序的列表:[3, 4, 2, 1, 5, 6, 8, 9]</span>
-<span class="token comment"># 排序后的列表:[1, 2, 3, 4, 5, 6, 8, 9]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>pd.Categorical()</code>这个方法，大家很少见吧！现在把自己的理解清晰的给正在疑惑的小伙伴说明一下！</p>
+<p>首先定义一个列表</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">str</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">,</span><span class="token string">'d'</span><span class="token punctuation">,</span><span class="token string">'e'</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>现在我们来使用Categorical方法</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">ss <span class="token operator">=</span> pd<span class="token punctuation">.</span>Categorical<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>ss<span class="token punctuation">)</span>
+
+<span class="token comment"># 结果</span>
+Categories <span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">,</span> <span class="token string">'d'</span><span class="token punctuation">,</span> <span class="token string">'e'</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>打印<code>ss</code>之后我们发现 <code>Categories (5, object): ['a', 'b', 'c', 'd', 'e']</code>把我们的重复值去掉了，原来有6个现在才有5个，那么其余的是不是不在了呢？</p>
+<p>答案是：其余还在，只不过使用了另外一个表示方式！</p>
+<p>我们现在来查看一下他是什么数据类型</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>ss<span class="token punctuation">.</span>dtype<span class="token punctuation">)</span>
+
+<span class="token comment"># 结果</span>
+category<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>现在我们再来看下<code>ss</code>的两个特别重要的属性</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>ss<span class="token punctuation">.</span>codes<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>ss<span class="token punctuation">.</span>categories<span class="token punctuation">)</span>
+
+<span class="token comment"># 结果</span>
+<span class="token punctuation">[</span><span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">2</span> <span class="token number">3</span> <span class="token number">4</span><span class="token punctuation">]</span>
+Index<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">,</span> <span class="token string">'d'</span><span class="token punctuation">,</span> <span class="token string">'e'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span><span class="token string">'object'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>通过对比，细心的你，应该发现，原来的字母现在已经被数字所代替，而且用的是从0开始的索引，所以a对应0遇到重复的a同样用0表示，这样就可以把非数值的转换成数值的，方便计算！我觉得这就是这个方法的最大好处！</p>
+<p><code>pd.Categorical( list ).codes</code> 这样就可以直接得到原始数据的对应的序号列表，通过这样的处理可以将类别信息转化成数值信息 ，这样就可以应用到模型中去了</p>
+<p>至于categories属性，可以看到原来的字母的去重后的情况！用处不大，主要还是codes比较实用</p>
 
                 
             </div>
@@ -654,7 +677,7 @@ select_sort<span class="token punctuation">(</span>li<span class="token punctuat
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.bulingling.top/posts/43d00a99.html">https://www.bulingling.top/posts/43d00a99.html</a>
+                    <a href="https://www.bulingling.top/posts/158338ef.html">https://www.bulingling.top/posts/158338ef.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -692,16 +715,8 @@ select_sort<span class="token punctuation">(</span>li<span class="token punctuat
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-                                    <span class="chip bg-color">选择排序算法</span>
-                                </a>
-                            
-                                <a href="/tags/python%E7%AE%97%E6%B3%95/">
-                                    <span class="chip bg-color">python算法</span>
-                                </a>
-                            
-                                <a href="/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                    <span class="chip bg-color">python数据结构</span>
+                                <a href="/tags/pandas%E5%85%A5%E9%97%A8/">
+                                    <span class="chip bg-color">pandas入门</span>
                                 </a>
                             
                         </div>
@@ -1278,53 +1293,48 @@ let metaPlaceholder = {"nick":"昵称(必填最少三个字)","mail":"QQ邮箱(�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/96555fb2.html">
+                <a href="/posts/158338ef.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/bVbswgT" class="responsive-img" alt="插入排序算法">
                         
-                        <span class="card-title">插入排序算法</span>
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="十分钟搞定pandas">
+                        
+                        <span class="card-title">十分钟搞定pandas</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            python插入排序算法和实现代码的最形象讲解
+                            最好具备一些python基础，这样子学起来很轻松。pandas入门(1)创建对象
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
+                            <a href="/categories/pandas/" class="post-category">
+                                    pandas
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">python算法</span>
-                    </a>
-                    
-                    <a href="/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">python数据结构</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">插入排序算法</span>
+                    <a href="/tags/pandas%E5%85%A5%E9%97%A8/">
+                        <span class="chip bg-color">pandas入门</span>
                     </a>
                     
                 </div>
@@ -1338,30 +1348,31 @@ let metaPlaceholder = {"nick":"昵称(必填最少三个字)","mail":"QQ邮箱(�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/4d081371.html">
+                <a href="/posts/65f8480c.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.png" class="responsive-img" alt="冒泡排序算法">
                         
-                        <span class="card-title">冒泡排序算法</span>
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="python编译exe文件">
+                        
+                        <span class="card-title">python编译exe文件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            python冒泡排序算法基本思想和实现代码的最形象讲解
+                            Python如何生成exe文件？用Pycharm一步一步带着你学(超详细、超贴心)
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-25
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
+                            <a href="/categories/python/" class="post-category">
+                                    python
                                 </a>
                             
                             
@@ -1371,16 +1382,12 @@ let metaPlaceholder = {"nick":"昵称(必填最少三个字)","mail":"QQ邮箱(�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">python算法</span>
+                    <a href="/tags/python%E7%BC%96%E8%AF%91exe%E6%96%87%E4%BB%B6/">
+                        <span class="chip bg-color">python编译exe文件</span>
                     </a>
                     
-                    <a href="/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">python数据结构</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">冒泡排序算法</span>
+                    <a href="/tags/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%BD%BF%E7%94%A8/">
+                        <span class="chip bg-color">python第三方库使用</span>
                     </a>
                     
                 </div>
