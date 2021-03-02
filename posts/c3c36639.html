@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="快速排序算法, Python AI Hadoop Hbase MapReduce">
+    <meta name="keywords" content="pathlib库的Path类, Python AI Hadoop Hbase MapReduce">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>快速排序算法 | 啵啵</title>
+    <title>pathlib库的Path类 | 啵啵</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/shage-sg/CDN/themes/source/libs/awesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/shage-sg/CDN/themes/source/libs/materialize/materialize.min.css">
@@ -370,12 +370,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/shage-sg/cloudimg/source/20190331172055940.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/002155-15924109151b79.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">快速排序算法</h1>
+                    <h1 class="description center-align post-title">pathlib库的Path类</h1>
                 </div>
             </div>
         </div>
@@ -496,16 +496,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python%E7%AE%97%E6%B3%95/">
-                                <span class="chip bg-color">python算法</span>
+                            <a href="/tags/pathlib%E5%BA%93/">
+                                <span class="chip bg-color">pathlib库</span>
                             </a>
                         
-                            <a href="/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                <span class="chip bg-color">python数据结构</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-                                <span class="chip bg-color">快速排序算法</span>
+                            <a href="/tags/Path/">
+                                <span class="chip bg-color">Path</span>
                             </a>
                         
                     </div>
@@ -516,8 +512,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                算法
+                            <a href="/categories/python/" class="post-category">
+                                python
                             </a>
                         
                     </div>
@@ -529,28 +525,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-19
+                    2021-03-02
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-20
+                    2021-03-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    699
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    3 分
                 </div>
                 
 
@@ -573,80 +569,116 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1><span id="python快速排序算法">Python快速排序算法</span></h1><h2><span id="一-快速排序算法的基本思想">一 . 快速排序算法的基本思想</span></h2><p>快速排序又被称为划分交换排序，通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两个数据分别进行快速排序，整个排序的过程可以递归进行，以此达到整个数据变成有序的序列。</p>
-<p>快速排序的分治法的实现类似于<code>Hadoop</code>的<code>Mapreduce</code>的分而治之的思想以及分区操作在<code>Hadoop</code>中也有分区、排序、合并操作。<code>Hadoop</code>大数据技术我会在以后的出一个专题系列。</p>
-<ol>
-<li><p>从数列中挑选出一个元素，我们称之为“基准”。</p>
-</li>
-<li><p>重新排列数列，所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆放在基准值的后边(相同的数值可以放到任意一边)。在这个分区结束之后，该基准就处于数列的中间位置。这个称之为分区操作。</p>
-</li>
-<li><p>递归地把小于基准值的元素子数列和大于基准值元素的子数列排序。</p>
-</li>
-<li><p>递归的最底部情形，是数列的大小是零或者是一，也就是永远都已经被排好序。虽然一直递归下去，但这个算法总归会结束，因为在每次迭代的过程中，他至少会把一个元素摆到它最后的位置去。</p>
-<p>是不是很抽象啊，接下来我们看下这张图片，或许就会有些许理解了。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg/source/20190331172055940.jpg" alt="快速排序"></p>
-</li>
-</ol>
-<h2><span id="二-快速排序的特点">二 . 快速排序的特点</span></h2><p>​    <code>速度快</code></p>
-<h2><span id="三-算法关键点">三 . 算法关键点</span></h2><ol>
-<li>确定作为基准元素的位置，取一个元素p<code>我们不妨取第一个元素</code>，使得元素p归位<code>序列p前的元素都比p小，p后的都比p大</code>。</li>
-<li>列表被元素p分成两部分，左边的都比p小，右边的都比p大。</li>
-<li>递归完成排序</li>
-</ol>
-<h2><span id="四-实现代码">四 . 实现代码</span></h2><p>快速排序的伪代码如下：</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># encoding=utf-8</span>
-<span class="token comment"># Time : 2021/2/16 20:11 </span>
-<span class="token comment"># Author : 啵啵</span>
-<span class="token comment"># File : quick_sort.py </span>
-<span class="token comment"># Software: PyCharm</span>
-<span class="token keyword">from</span> cal_time <span class="token keyword">import</span> cal_time
+                <p>今天刚刚好学习到了pathlib库的Path类的使用，一起和大家分享一下。</p>
+<h3><span id="调用库">调用库</span></h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> pathlib <span class="token keyword">import</span> Path<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3><span id="创建path对象">创建Path对象</span></h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">p <span class="token operator">=</span> Path<span class="token punctuation">(</span><span class="token string">'E:/python/a.py'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span>
 
-<span class="token keyword">def</span> <span class="token function">partition</span><span class="token punctuation">(</span>li<span class="token punctuation">,</span> left<span class="token punctuation">,</span> right<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    temp <span class="token operator">=</span> li<span class="token punctuation">[</span>left<span class="token punctuation">]</span>
-    <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right<span class="token punctuation">:</span>
-        <span class="token comment"># 从右边找比tmp小的数</span>
-        <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right <span class="token keyword">and</span> li<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">&gt;=</span> temp<span class="token punctuation">:</span>
-            right <span class="token operator">-=</span> <span class="token number">1</span>
-        <span class="token comment"># 如果右边的值比基准值小，则把右边的值写到左边的空位置上</span>
-        li<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">=</span> li<span class="token punctuation">[</span>right<span class="token punctuation">]</span>
+<span class="token comment"># 也可以这样子使用，想当于os.path.join()</span>
+p1 <span class="token operator">=</span> Path<span class="token punctuation">(</span><span class="token string">'E:/python'</span><span class="token punctuation">)</span>
+p2 <span class="token operator">=</span> p1 <span class="token operator">/</span> <span class="token string">'abc'</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>p2<span class="token punctuation">)</span>
 
-        <span class="token keyword">while</span>  left <span class="token operator">&lt;</span> right <span class="token keyword">and</span> li<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">&lt;</span> temp<span class="token punctuation">:</span>
-            left <span class="token operator">+=</span><span class="token number">1</span>
-        <span class="token comment"># 如果左边的值比基准值小，则把左边的值写到右边的空位置上</span>
-        li<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">=</span> li<span class="token punctuation">[</span>left<span class="token punctuation">]</span>
-    <span class="token comment"># temp归位</span>
-    <span class="token comment"># 当left和right下标相等时，说明此趟排序完成</span>
-    <span class="token comment"># 这里写left和right都一样，因为他们相遇值一样</span>
-    li<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">=</span> temp
-    <span class="token keyword">return</span> left
+<span class="token comment"># 结果</span>
+E<span class="token punctuation">:</span>\python\a<span class="token punctuation">.</span>py
+E<span class="token punctuation">:</span>\python\<span class="token number">123</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3><span id="pathcwd">Path.cwd()</span></h3><p><code>获取当前路径</code></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># cwd 顾名思义:current word directory</span>
+path <span class="token operator">=</span> Path<span class="token punctuation">.</span>cwd<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>
 
-<span class="token keyword">def</span> <span class="token function">_quick_sort</span><span class="token punctuation">(</span>li<span class="token punctuation">,</span>left<span class="token punctuation">,</span>right<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token comment"># 至少两个元素</span>
-    <span class="token keyword">if</span> left <span class="token operator">&lt;</span> right<span class="token punctuation">:</span>
-        mid <span class="token operator">=</span> partition<span class="token punctuation">(</span>li<span class="token punctuation">,</span>left<span class="token punctuation">,</span>right<span class="token punctuation">)</span>
-        _quick_sort<span class="token punctuation">(</span>li<span class="token punctuation">,</span> left<span class="token punctuation">,</span> mid<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
-        _quick_sort<span class="token punctuation">(</span>li<span class="token punctuation">,</span> mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> right<span class="token punctuation">)</span>
-<span class="token decorator annotation punctuation">@cal_time</span>
-<span class="token keyword">def</span> <span class="token function">quick_sort</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    _quick_sort<span class="token punctuation">(</span>li<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>代码讲解:</p>
-<p>快速排序算法相对来说比较困难，直接把注释写到代码旁边了。</p>
-<p>大家注意到了没，为什么写了<code>_quick_sort</code>还要再写到quick_sort内执行，因为使用了装饰器，<code>_quick_sort</code>是一个递归函数，则装饰器会在每次函数调用时返回一个结果。我们是想求得整个排序耗费时间而不是每一趟的时间。如果数据量过小，需要提高装饰器的精度才能显示时间，否则只能显示0秒，排序速度太快哈哈哈。</p>
-<h2><span id="五-运行测试">五 . 运行测试</span></h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">li <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"要排序的列表:{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span>
-quick_sort<span class="token punctuation">(</span>li<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"排序后的列表:{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token comment"># 结果:</span>
-<span class="token comment"># 要排序的列表:[3, 4, 2, 1, 5, 6, 8, 9]</span>
-<span class="token comment"># 排序后的列表:[1, 2, 3, 4, 5, 6, 8, 9]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2><span id="六-时间复杂度">六 . 时间复杂度</span></h2><ul>
-<li>最优时间复杂度：<code>O(nlogn)</code></li>
-<li>最坏时间复杂度：O(n<sup>2</sup>)</li>
-<li>稳定性：不稳定</li>
-</ul>
-<p>从一开始快速排序平均需要花费<code>O(nlogn)</code>时间的描述并不明显。但是不难观察到的是分区运算，数组的元素都会在每次循环中走访过一次，使用<code>O(n)</code>的时间。在使用结合（concatenation）的版本中，这项运算也是<code>O(n)</code>。</p>
-<p>在最好的情况，每次我们运行一次分区，我们会把一个数列分为两个几近相等的片段。这个意思就是每次递归调用处理一半大小的数列。因此，在到达大小为一的数列前，我们只要作<code>logn</code>次嵌套的调用。这个意思就是调用树的深度是<code>O(logn)</code>。但是在同一层次结构的两个程序调用中，不会处理到原来数列的相同部分；因此，程序调用的每一层次结构总共全部仅需要<code>O(n)</code>的时间（每个调用有某些共同的额外耗费，但是因为在每一层次结构仅仅只有<code>O(n)</code>个调用，这些被归纳在O(n)系数中。结果是这个算法仅需使用<code>O(nlogn)</code>时间。</p>
+<span class="token comment"># 结果</span>
+E<span class="token punctuation">:</span>\python<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3><span id="pathstat">Path.stat()</span></h3><p><code>获取当前文件的元数据信息</code></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">p <span class="token operator">=</span> Path<span class="token punctuation">(</span><span class="token string">'1.py'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>stat<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 结果</span>
+os<span class="token punctuation">.</span>stat_result<span class="token punctuation">(</span>st_mode<span class="token operator">=</span><span class="token number">33206</span><span class="token punctuation">,</span> st_ino<span class="token operator">=</span><span class="token number">8444249301448143</span><span class="token punctuation">,</span> st_dev<span class="token operator">=</span><span class="token number">2561774433</span><span class="token punctuation">,</span> st_nlink<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> st_uid<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> st_gid<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> st_size<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">,</span> st_atime<span class="token operator">=</span><span class="token number">1525926554</span><span class="token punctuation">,</span> st_mtime<span class="token operator">=</span><span class="token number">1525926554</span><span class="token punctuation">,</span> st_ctime<span class="token operator">=</span><span class="token number">1525926554</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3><span id="pathexists">Path.exists()</span></h3><p><code>判断当前路径是否是文件或者文件夹</code></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">Path<span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>exists<span class="token punctuation">(</span><span class="token punctuation">)</span>
+Path<span class="token punctuation">(</span><span class="token string">'a.py'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>exists<span class="token punctuation">(</span><span class="token punctuation">)</span>
+Path<span class="token punctuation">(</span><span class="token string">'2.py'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>exists<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 结果</span>
+<span class="token boolean">True</span>
+<span class="token boolean">True</span>
+<span class="token boolean">False</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3><span id="pathglobpattern与pathrglobpattern">Path.glob(pattern)与Path.rglob()(pattern)</span></h3><p><code>Path.glob(pattern):获取路径下的所有符合pattern的文件，返回一个generator</code></p>
+<p>目录下的文件如下：</p>
+<p><code>moudel为文件夹 ,a.py,b.py,c.py</code></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">path <span class="token operator">=</span> Path<span class="token punctuation">.</span>cwd<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># pys是经过yeild产生的迭代器</span>
+pys <span class="token operator">=</span> path<span class="token punctuation">.</span>glob<span class="token punctuation">(</span><span class="token string">'*.py'</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> py <span class="token keyword">in</span> pys<span class="token punctuation">:</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span>py<span class="token punctuation">)</span>
+
+<span class="token comment"># 结果</span>
+E<span class="token punctuation">:</span>\python\a<span class="token punctuation">.</span>py
+E<span class="token punctuation">:</span>\python\b<span class="token punctuation">.</span>py
+E<span class="token punctuation">:</span>\python\c<span class="token punctuation">.</span>py<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>Path.rglob(pattern):与上面类似，只不过是返回路径中所有子文件夹的符合pattern的文件。</code></p>
+<h3><span id="pathis_dir与pathis_file">Path.is_dir()与Path.is_file()</span></h3><p><code>Path.is_dir()判断该路径是否是文件夹</code><br><code>Path.is_file()判断该路径是否是文件</code></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'p1:'</span><span class="token punctuation">)</span>
+p1 <span class="token operator">=</span> Path<span class="token punctuation">(</span><span class="token string">'D:/python'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>p1<span class="token punctuation">.</span>is_dir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>p1<span class="token punctuation">.</span>is_file<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+ 
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'p2:'</span><span class="token punctuation">)</span>
+p2 <span class="token operator">=</span> Path<span class="token punctuation">(</span><span class="token string">'D:/python/1.py'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>p2<span class="token punctuation">.</span>is_dir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>p2<span class="token punctuation">.</span>is_file<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+ 
+<span class="token comment">#当路径不存在时也会返回Fasle</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'wrong path:'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>Path<span class="token punctuation">(</span><span class="token string">'D:/NoneExistsPath'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>is_dir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>Path<span class="token punctuation">(</span><span class="token string">'D:/NoneExistsPath'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>is_file<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 结果</span>
+p1<span class="token punctuation">:</span>
+<span class="token boolean">True</span>
+<span class="token boolean">False</span>
+p2<span class="token punctuation">:</span>
+<span class="token boolean">False</span>
+<span class="token boolean">True</span>
+wrong path<span class="token punctuation">:</span>
+<span class="token boolean">False</span>
+<span class="token boolean">False</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3><span id="pathiterdir">Path.iterdir()</span></h3><p><code>当path为文件夹时，通过yield产生path文件夹下的所有文件、文件夹路径的迭代器</code></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">p <span class="token operator">=</span> Path<span class="token punctuation">.</span>cwd<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> p<span class="token punctuation">.</span>iterdir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+
+<span class="token comment"># 结果</span>
+D<span class="token punctuation">:</span>\python\a<span class="token punctuation">.</span>py
+D<span class="token punctuation">:</span>\python\b<span class="token punctuation">.</span>py
+D<span class="token punctuation">:</span>\python\c<span class="token punctuation">.</span>py
+D<span class="token punctuation">:</span>\python\moudle<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3><span id="pathmkdirmode0o777parentsfasle">Path.mkdir(mode=0o777,parents=Fasle)</span></h3><p><code>根据路径创建文件夹,parents=True时，会依次创建路径中间缺少的文件夹</code></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">p_new <span class="token operator">=</span> p<span class="token operator">/</span><span class="token string">'new_dir'</span>
+p_new<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span><span class="token punctuation">)</span>
+ 
+p_news <span class="token operator">=</span> p<span class="token operator">/</span><span class="token string">'new_dirs/new_dir'</span>
+p_news<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span>parents<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3><span id="pathopenmoder-buffering-1-encodingnone-errorsnone-newlinenone">Path.open(mode=’r’, buffering=-1, encoding=None, errors=None, newline=None)</span></h3><p><code>类似于open()函数</code></p>
+<h3><span id="pathrenametarget">Path.rename(target)</span></h3><p><code>当target是string时，重命名文件或文件夹</code></p>
+<p><code>当target是Path时，重命名并移动文件或文件夹</code></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">p1 <span class="token operator">=</span> Path<span class="token punctuation">(</span><span class="token string">'a.py'</span><span class="token punctuation">)</span>
+p1<span class="token punctuation">.</span>rename<span class="token punctuation">(</span><span class="token string">'new_name.py'</span><span class="token punctuation">)</span>
+ 
+p2 <span class="token operator">=</span> Path<span class="token punctuation">(</span><span class="token string">'b.py'</span><span class="token punctuation">)</span>
+target <span class="token operator">=</span> Path<span class="token punctuation">(</span><span class="token string">'new_dir/new_name.py'</span><span class="token punctuation">)</span>
+p2<span class="token punctuation">.</span>rename<span class="token punctuation">(</span>target<span class="token punctuation">)</span>
+
+<span class="token comment"># 案例自己可以尝试一下</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3><span id="pathreplacetarget">Path.replace(target)</span></h3><p><code>重命名当前文件或文件夹，如果target所指示的文件或文件夹已存在，则覆盖原文件</code></p>
+<h3><span id="pathparentpathparents">Path.parent(),Path.parents()</span></h3><p><code>parent获取path的上级路径，parents获取path的所有上级路径</code></p>
+<h3><span id="pathis_absolute">Path.is_absolute()</span></h3><p><code>判断path是否是绝对路径</code></p>
+<h3><span id="pathmatchpattern">Path.match(pattern)</span></h3><p><code>判断path是否满足pattern</code></p>
+<h3><span id="pathrmdir">Path.rmdir()</span></h3><p><code>当path为空文件夹的时候，删除该文件夹</code></p>
+<h3><span id="pathname">Path.name</span></h3><p><code>获取path文件名</code></p>
+<h3><span id="pathsuffix">Path.suffix</span></h3><p><code>获取path文件后缀</code></p>
+<p>好了今天就和大家分享到这里啦</p>
 
                 
             </div>
@@ -673,7 +705,7 @@ quick_sort<span class="token punctuation">(</span>li<span class="token punctuati
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.bulingling.top/posts/ff8068c0.html">https://www.bulingling.top/posts/ff8068c0.html</a>
+                    <a href="https://www.bulingling.top/posts/c3c36639.html">https://www.bulingling.top/posts/c3c36639.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -711,16 +743,12 @@ quick_sort<span class="token punctuation">(</span>li<span class="token punctuati
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/python%E7%AE%97%E6%B3%95/">
-                                    <span class="chip bg-color">python算法</span>
+                                <a href="/tags/pathlib%E5%BA%93/">
+                                    <span class="chip bg-color">pathlib库</span>
                                 </a>
                             
-                                <a href="/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                    <span class="chip bg-color">python数据结构</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-                                    <span class="chip bg-color">快速排序算法</span>
+                                <a href="/tags/Path/">
+                                    <span class="chip bg-color">Path</span>
                                 </a>
                             
                         </div>
@@ -1297,45 +1325,51 @@ let metaPlaceholder = {"nick":"昵称(必填最少三个字)","mail":"QQ邮箱(�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/75f55e54.html">
+                <a href="/posts/c3c36639.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/20191228095545228.png" class="responsive-img" alt="PyCharm永久破解方法">
+                        <img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/002155-15924109151b79.jpg" class="responsive-img" alt="pathlib库的Path类">
                         
-                        <span class="card-title">PyCharm永久破解方法</span>
+                        <span class="card-title">pathlib库的Path类</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            PyCharm永久破解方法
+                            python3中pathlib库的Path类的使用详解
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/PyCharm%E6%B0%B8%E4%B9%85%E7%A0%B4%E8%A7%A3%E6%96%B9%E6%B3%95/" class="post-category">
-                                    PyCharm永久破解方法
+                            <a href="/categories/python/" class="post-category">
+                                    python
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/PyCharm%E6%B0%B8%E4%B9%85%E7%A0%B4%E8%A7%A3%E6%96%B9%E6%B3%95/">
-                        <span class="chip bg-color">PyCharm永久破解方法</span>
+                    <a href="/tags/pathlib%E5%BA%93/">
+                        <span class="chip bg-color">pathlib库</span>
+                    </a>
+                    
+                    <a href="/tags/Path/">
+                        <span class="chip bg-color">Path</span>
                     </a>
                     
                 </div>
@@ -1349,30 +1383,31 @@ let metaPlaceholder = {"nick":"昵称(必填最少三个字)","mail":"QQ邮箱(�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/96555fb2.html">
+                <a href="/posts/158338ef.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/bVbswgT" class="responsive-img" alt="插入排序算法">
                         
-                        <span class="card-title">插入排序算法</span>
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="十分钟搞定pandas">
+                        
+                        <span class="card-title">十分钟搞定pandas</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            python插入排序算法和实现代码的最形象讲解
+                            最好具备一些python基础，这样子学起来很轻松。pandas入门(1)创建对象
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-26
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
+                            <a href="/categories/pandas/" class="post-category">
+                                    pandas
                                 </a>
                             
                             
@@ -1382,16 +1417,8 @@ let metaPlaceholder = {"nick":"昵称(必填最少三个字)","mail":"QQ邮箱(�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">python算法</span>
-                    </a>
-                    
-                    <a href="/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">python数据结构</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">插入排序算法</span>
+                    <a href="/tags/pandas%E5%85%A5%E9%97%A8/">
+                        <span class="chip bg-color">pandas入门</span>
                     </a>
                     
                 </div>

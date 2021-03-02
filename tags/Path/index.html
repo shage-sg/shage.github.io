@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="鸽鸽, Python AI Hadoop Hbase MapReduce">
+    <meta name="keywords" content="标签: Path, Python AI Hadoop Hbase MapReduce">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>鸽鸽 | 啵啵</title>
+    <title>标签: Path | 啵啵</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/shage-sg/CDN/themes/source/libs/awesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/shage-sg/CDN/themes/source/libs/materialize/materialize.min.css">
@@ -353,24 +353,7 @@
 
 </header>
 
-    <!-- 加密功能 -->
-
-    <script src="https://cdn.jsdelivr.net/gh/shage-sg/CDN/themes/source/libs/cryptojs/crypto-js.min.js"></script>
-    <script>
-        (function() {
-            let pwd = '';
-
-            if (pwd && pwd.length > 0) {
-                if (pwd !== CryptoJS.SHA256(prompt('该相册已加密，请输入密码访问')).toString(CryptoJS.enc.Hex)) {
-                    alert('密码错误，将返回主页！');
-                    location.href = '/';
-                }
-            }
-        })();
-    </script>
-
-
-<!-- <div class="bg-cover pd-header about-cover">
+    <div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
@@ -412,206 +395,292 @@
 
 
     </div>
-</div> -->
+</div>
 
-<link rel="stylesheet" href="/libs/MyGallery/css/baguetteBox.css">
-<!-- 该主题自带的lightGallery.js在图片多的时候会很卡，所以弃用，使用了一个我在网上找的baguetteBox，很轻量级，就是功能少了点 -->
-<script src="/libs/MyGallery/js/baguetteBox.js"></script> 
-<style>    
-    .my-gallery .photo img {
-        transition: all 0.6s ease-in-out; 
-    }     
-    .my-gallery .photo:hover img {
-        opacity: 0.6;
-        transform: scale(1.05);
-    }      
-    .my-gallery {
-        margin: 20px auto;
-    }   
-    .miaoshus .title {
-        font-family: MV Boli;
-    }
-    .miaoshus {
-        padding: 20px;
-        border: 1px dashed #e6e6e6;
-        color: #969696;
-        position: relative;
-        display: inline-block;
-        width: 75%;
-        background: #fbfbfb50;
-        border-radius: 10px;
-        font-size: 16px;
-        margin: 24px auto 12px;
-        
-    }
-    body.dark .miaoshus {
-        background: 0 0;
-        border: 1px dashed #888;
-    }
-    body {
-        overflow: visible!important;
-    }
-    .box {
-            position: relative;
-        }
-    .box img {
-        width: 350px;
-        vertical-align: top;
-        padding: 8px;
-        border-radius: 10px;
-        transition: all 0.5s;
-    }
-    .box img:hover {
-        transform: scale(1.05);
-    }
-    .page-footer {
-        display: none
-    }
-    body {
-        overflow-y: visible!important;
-    }
-    header {
-        background-color: #ee6e73;
-    }
-    .biaotiss {
-            font-family: MV Boli;
-        }   
-    @media only screen and (max-width: 1058px) {
-        .box {
-            margin-left: 145px;
-        }
-    }
-    @media only screen and (max-width: 770px) {
-        .box {
-            margin-left: 15px;
-        }
-    }
-    @media only screen and (max-width: 500px) {
-        #previous-button, #next-button {
-            display: none;
-        }
-    }
-    @media only screen and (max-width: 380px) {
-        .box {
-            margin-left: -5px;
-        }
-    }
-    @media only screen and (max-width: 323px) {
-        .box img {
-            width: 296px;
-            left: 0;
-        }
-    }
-</style>
+<main class="content">
 
-<div class="tag-title center-align">
-    <div class="miaoshus">
-        <div class="title center-align">
-            “ 
-                鸽鸽
-             ”
+    
+
+<div id="tags" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+            </div>
+            <div class="tag-chips">
+                
+                
+                <a href="/tags/Git%E7%AE%80%E4%BB%8B/" title="Git简介: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Git简介" style="background-color: #F9EBEA;">Git简介
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Git%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85/" title="Git下载和安装: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Git下载和安装" style="background-color: #F5EEF8;">Git下载和安装
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Git%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/" title="Git名词解释: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Git名词解释" style="background-color: #D5F5E3;">Git名词解释
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Git%E5%A4%9A%E5%8D%8F%E8%AE%AE%E6%96%B9%E5%BC%8F/" title="Git多协议方式: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Git多协议方式" style="background-color: #E8F8F5;">Git多协议方式
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="Git常用命令: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Git常用命令" style="background-color: #FEF9E7;">Git常用命令
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" title="选择排序算法: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="选择排序算法" style="background-color: #F8F9F9;">选择排序算法
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/python%E7%AE%97%E6%B3%95/" title="python算法: 4">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="python算法" style="background-color: #82E0AA;">python算法
+                        <span class="tag-length">4</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="python数据结构: 4">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="python数据结构" style="background-color: #D7BDE2;">python数据结构
+                        <span class="tag-length">4</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9/" title="缓存雪崩: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="缓存雪崩" style="background-color: #A3E4D7;">缓存雪崩
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F/" title="缓存穿透: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="缓存穿透" style="background-color: #85C1E9;">缓存穿透
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E7%BC%93%E5%AD%98%E5%87%BB%E7%A9%BF/" title="缓存击穿: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="缓存击穿" style="background-color: #F8C471;">缓存击穿
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" title="插入排序算法: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="插入排序算法" style="background-color: #F9E79F;">插入排序算法
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/PyCharm%E6%B0%B8%E4%B9%85%E7%A0%B4%E8%A7%A3%E6%96%B9%E6%B3%95/" title="PyCharm永久破解方法: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="PyCharm永久破解方法" style="background-color: #F8F9F9;">PyCharm永久破解方法
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" title="冒泡排序算法: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="冒泡排序算法" style="background-color: #FEF9E7;">冒泡排序算法
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" title="快速排序算法: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="快速排序算法" style="background-color: #85C1E9;">快速排序算法
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/python%E7%BC%96%E8%AF%91exe%E6%96%87%E4%BB%B6/" title="python编译exe文件: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="python编译exe文件" style="background-color: #82E0AA;">python编译exe文件
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%BD%BF%E7%94%A8/" title="python第三方库使用: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="python第三方库使用" style="background-color: #F9EBEA;">python第三方库使用
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/" title="Git分支管理: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Git分支管理" style="background-color: #82E0AA;">Git分支管理
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Git%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93/" title="Git创建版本库: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Git创建版本库" style="background-color: #F8C471;">Git创建版本库
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/pandas%E5%85%A5%E9%97%A8/" title="pandas入门: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="pandas入门" style="background-color: #A3E4D7;">pandas入门
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Git/" title="Git: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Git" style="background-color: #F9E79F;">Git
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E9%9B%86%E4%B8%AD%E5%BC%8F%E5%92%8C%E5%88%86%E5%B8%83%E5%BC%8F%E5%BC%80%E5%8F%91/" title="集中式和分布式开发: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="集中式和分布式开发" style="background-color: #F8C471;">集中式和分布式开发
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Git%E8%BF%9C%E7%A8%8B%E5%BA%93%E5%92%8C%E6%9C%AC%E5%9C%B0%E5%BA%93/" title="Git远程库和本地库: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Git远程库和本地库" style="background-color: #F9E79F;">Git远程库和本地库
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/pathlib%E5%BA%93/" title="pathlib库: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="pathlib库" style="background-color: #A3E4D7;">pathlib库
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Path/" title="Path: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            data-tagname="Path" style="background-color: #F8F9F9;">Path
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+            </div>
         </div>
-        “ 光影流年 ”
-        “ 这里有光影流年，还有两朵穿衣裳的云，相拥在明天的河岸。”
     </div>
 </div>
 
-<!-- 相册 -->
-<section class="gallery">
-    <div id="myGallery" class="my-gallery">
-        <div class="row">
-            <div class="box">
+    
+
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
             
-                
-                
-                                       
-                        <a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/1.png" data-caption="鸽鸽">
-                            <img class="mat" src="/medias/loading.gif" data-src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/1.png" alt="img"+0 >
-                        </a>                   
-                
-                                       
-                        <a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/ge2.png" data-caption="鸽鸽">
-                            <img class="mat" src="/medias/loading.gif" data-src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/ge2.png" alt="img"+1 >
-                        </a>                   
-                
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="pathlib库, Path" data-aos="fade-up">
+                <div class="card">
+                    <a href="/posts/c3c36639.html">
+                        <div class="card-image tag-image">
+                            
+                            <img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/002155-15924109151b79.jpg" class="responsive-img" alt="pathlib库的Path类">
+                            
+                            <span class="card-title">pathlib库的Path类</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-02
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/python/" class="post-category">
+                                python
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
         </div>
-        </div>
-    </div>
-</section>
-<script>
-    $(function () {
-        // 获取图片的宽度(200px)
-        let imgWidth = $('.mat').outerWidth(); // 200
-        waterfallHandler();
-        // 瀑布流处理
-        function waterfallHandler() {
-            // 获取图片的列数
-            let column = parseInt($(window).width() / imgWidth);
-            // 高度数组
-            let heightArr = [];
-            for(let i=0; i<column; i++) {
-                heightArr[i] = 0;
-            }
-            // 遍历所有图片进行定位处理
-            $.each($('.mat'), function (index, item) {
-                // 当前元素的高度
-                let itemHeight = $(item).outerHeight();
-                // 高度数组最小的高度
-                let minHeight = Math.min(...heightArr);
-                // 高度数组最小的高度的索引
-                let minIndex = heightArr.indexOf(minHeight);
-                
-                $(item).css({
-                    position: 'absolute',
-                    top: minHeight + 'px',
-                    left: minIndex * imgWidth + 'px'
-                });
-                heightArr[minIndex] += itemHeight;
-            });
-        }
-        // 窗口大小改变
-        $(window).resize(function () {
-            waterfallHandler();
-        });
-    });
-</script>
-<script>
-    baguetteBox.run('.gallery', {
-        // 配置参数
-        buttons:Boolean,//是否显示导航按钮。
-        noScrollbars:true,//是否在显示时隐藏滚动条。
-        titleTag:true,//是否使用图片上的title属性作为图片标题
-        async:false,//是否异步加载文件。
-    });
+    </article>
+</main>
 
-    start()
-        $(window).on('scroll', function(){
-        start();
-    })
 
-    function start(){
-          //.not('[data-isLoaded]')选中已加载的图片不需要重新加载
-        $('.gallery img').not('[data-isLoaded]').each(function(){
-            var $node = $(this)
-            if( isShow($node) ){
-                loadImg($node);
-            }
-        });
-    }
 
-    //判断一个元素是不是出现在窗口(视野)
-    function isShow($node){
-        return $node.offset().top <= $(window).height() + $(window).scrollTop();
-    }
-    //加载图片
-    function loadImg($img){
-    //.attr(值)
-    //.attr(属性名称,值)
-        $img.attr('src', $img.attr('data-src')); //把data-src的值 赋值给src
-        $img.attr('data-isLoaded', 1);//已加载的图片做标记
-    }
-</script>
 
     <footer class="page-footer bg-color">
     

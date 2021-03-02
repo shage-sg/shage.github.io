@@ -6,7 +6,7 @@
   <link href="https://www.bulingling.top/atom.xml" rel="self"/>
   
   <link href="https://www.bulingling.top/"/>
-  <updated>2021-02-27T13:17:31.907Z</updated>
+  <updated>2021-03-02T14:20:28.164Z</updated>
   <id>https://www.bulingling.top/</id>
   
   <author>
@@ -17,15 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>十分钟搞定pandas</title>
-    <link href="https://www.bulingling.top/posts/158338ef.html"/>
-    <id>https://www.bulingling.top/posts/158338ef.html</id>
-    <published>2021-02-27T13:17:31.000Z</published>
-    <updated>2021-02-27T13:17:31.907Z</updated>
+    <title>pathlib库的Path类</title>
+    <link href="https://www.bulingling.top/posts/c3c36639.html"/>
+    <id>https://www.bulingling.top/posts/c3c36639.html</id>
+    <published>2021-03-02T13:47:21.000Z</published>
+    <updated>2021-03-02T14:20:28.164Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天刚刚好学习到了pathlib库的Path类的使用，一起和大家分享一下。&lt;/p&gt;
+&lt;h3&gt;&lt;span id=&quot;调用库&quot;&gt;调用库&lt;/span&gt;&lt;/h3&gt;&lt;pre class=&quot;line-numbers language-python&quot;</summary>
+        
+      
     
     
     
+    <category term="python" scheme="https://www.bulingling.top/categories/python/"/>
     
+    
+    <category term="pathlib库" scheme="https://www.bulingling.top/tags/pathlib%E5%BA%93/"/>
+    
+    <category term="Path" scheme="https://www.bulingling.top/tags/Path/"/>
     
   </entry>
   
