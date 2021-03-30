@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Python AI Hadoop Hbase MapReduce">
+    <meta name="keywords" content="分类: 机器学习, Python AI Hadoop Hbase MapReduce">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>啵啵</title>
+    <title>分类: 机器学习 | 啵啵</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/shage-sg/CDN/themes/source/libs/awesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/shage-sg/CDN/themes/source/libs/materialize/materialize.min.css">
@@ -353,7 +353,6 @@
 
 </header>
 
-    
     <div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
@@ -398,44 +397,294 @@
     </div>
 </div>
 
-
 <main class="content">
 
-    
+        <style>
+    /* 文章分类书本样式 */
+    .chip-container .tag-chips {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .chip-container .tag-chips a {
+        margin: 0 7px 10px;
+    }
+    .chip-container .chip {
+        max-width: calc(100% / 4);
+        min-width: 10em;
+        height: 200px;
+        position: relative;
+        transition: .5s linear;
+        padding: 19px 0;
+        line-height: 20px;
+        z-index: 990;
+        border-radius: 5px 15px 15px 5px;
+        transform-origin: left center 0;
+    }
+    .chip-container .notebook-cover::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: calc(100% + 2px);
+        top: -1px;
+        z-index: 100;
+        border-radius: 2px;
+        right: 25px;
+        transition: 2s ease;
+        background: linear-gradient(to right,#1e606e 0,#2e95aa 12%,#1e606e 25%,#2e95aa 37%,#1e606e 50%,#2e95aa 62%,#1e606e 75%,#2e95aa 87%,#1e606e 100%);
+    }
+
+    .chip .notebook-skin {
+        height: 50px;
+        width: 100%;
+        background: pink;
+        margin-top: 42px;
+        padding: 10px 32px 64px 10px;
+        font-size: 19px;
+        position: relative;
+        z-index: 10;
+        color: #222;
+        text-align: left;
+        box-shadow: 0 1px 1px rgba(0,0,0,.2);
+    }
+    .chip .notebook-skin:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 15px;
+        left: 0;
+        bottom: 0;
+        background: #cddc39;
+    }
+    .notebook-cover {
+        background: #cc4b48;
+        height: 200px;
+        width: 140px;
+        position: absolute;
+        border-radius: 5px 15px 15px 5px;
+        z-index: 10;
+        transition: .5s linear;
+        transform-style: preserve-3d;
+        transform-origin: left center 0;
+    }
+
+    .moleskine-wrapper {
+        max-width: calc(100% / 4);
+        min-width: 10em;
+    }
+    .moleskine-notebook:hover .notebook-cover {
+        transform: rotateY(-50deg);
+        z-index: 99;
+        box-shadow: 20px 10px 50px rgba(0,0,0,.2);
+    }
+    .moleskine-notebook {
+        height: 200px;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        transition: .5s linear;
+        border-radius: 5px 15px 15px 5px;
+        transform-origin: left center 0;
+    }
+    .moleskine-notebook:hover {
+        transform: rotateZ(-10deg);
+    }
+    .notebook-page.dotted {
+        background: linear-gradient(to bottom,#fbfae8 9px,#e4e4e4 1px);
+        background-size: 100% 10px;
+    }
+    .chip-container .chip:hover {
+        background: none;
+    }
+    .notebook-page {
+        height: 100%;
+        width: 140px;
+        position: absolute;
+        top: 10px;
+        background-color: pink;
+        z-index: 0;
+        border-radius: 5px 16px 16px 5px;
+        overflow: hidden;
+    }
+    </style>
+
+
+
+
+<div id="category-cloud" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
+            </div>
+            <div class="tag-chips">
+                
+                
+                
+                <a href="/categories/Git/" title="Git: 10">
+                      <div class="moleskine-wrapper">
+      			<div class="moleskine-notebook">
+          		<div class="chip notebook-cover center-align waves-effect waves-light
+           chip-default "
+                  style="background-color: #F9EBEA;">                                               
+              <div class="notebook-skin
+                   chip-default "
+                  >Git                                  
+              </div>
+          </div>
+          <div class="notebook-page dotted"></div>
+      </div>
+  </div>
+
+                </a>
+                
+                
+                <a href="/categories/%E7%AE%97%E6%B3%95/" title="算法: 4">
+                      <div class="moleskine-wrapper">
+      			<div class="moleskine-notebook">
+          		<div class="chip notebook-cover center-align waves-effect waves-light
+           chip-default "
+                  style="background-color: #F5EEF8;">                                               
+              <div class="notebook-skin
+                   chip-default "
+                  >算法                                  
+              </div>
+          </div>
+          <div class="notebook-page dotted"></div>
+      </div>
+  </div>
+
+                </a>
+                
+                
+                <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" title="机器学习: 1">
+                      <div class="moleskine-wrapper">
+      			<div class="moleskine-notebook">
+          		<div class="chip notebook-cover center-align waves-effect waves-light
+           chip-active "
+                  style="background-color: #D5F5E3;">                                               
+              <div class="notebook-skin
+                   chip-active "
+                  >机器学习                                  
+              </div>
+          </div>
+          <div class="notebook-page dotted"></div>
+      </div>
+  </div>
+
+                </a>
+                
+                
+                <a href="/categories/%E7%BC%93%E5%AD%98%E9%97%AE%E9%A2%98/" title="缓存问题: 1">
+                      <div class="moleskine-wrapper">
+      			<div class="moleskine-notebook">
+          		<div class="chip notebook-cover center-align waves-effect waves-light
+           chip-default "
+                  style="background-color: #E8F8F5;">                                               
+              <div class="notebook-skin
+                   chip-default "
+                  >缓存问题                                  
+              </div>
+          </div>
+          <div class="notebook-page dotted"></div>
+      </div>
+  </div>
+
+                </a>
+                
+                
+                <a href="/categories/python/" title="python: 2">
+                      <div class="moleskine-wrapper">
+      			<div class="moleskine-notebook">
+          		<div class="chip notebook-cover center-align waves-effect waves-light
+           chip-default "
+                  style="background-color: #FEF9E7;">                                               
+              <div class="notebook-skin
+                   chip-default "
+                  >python                                  
+              </div>
+          </div>
+          <div class="notebook-page dotted"></div>
+      </div>
+  </div>
+
+                </a>
+                
+                
+                <a href="/categories/%E8%BD%AF%E4%BB%B6%E7%A0%B4%E8%A7%A3/" title="软件破解: 2">
+                      <div class="moleskine-wrapper">
+      			<div class="moleskine-notebook">
+          		<div class="chip notebook-cover center-align waves-effect waves-light
+           chip-default "
+                  style="background-color: #F8F9F9;">                                               
+              <div class="notebook-skin
+                   chip-default "
+                  >软件破解                                  
+              </div>
+          </div>
+          <div class="notebook-page dotted"></div>
+      </div>
+  </div>
+
+                </a>
+                
+                
+                <a href="/categories/pandas/" title="pandas: 1">
+                      <div class="moleskine-wrapper">
+      			<div class="moleskine-notebook">
+          		<div class="chip notebook-cover center-align waves-effect waves-light
+           chip-default "
+                  style="background-color: #82E0AA;">                                               
+              <div class="notebook-skin
+                   chip-default "
+                  >pandas                                  
+              </div>
+          </div>
+          <div class="notebook-page dotted"></div>
+      </div>
+  </div>
+
+                </a>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+
 
     
 
-    <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
-        <div class="row article-row">
+        <div class="row tags-posts">
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/posts/aadc9cb4.html">
-                        <div class="card-image">
+                    <a href="/posts/bea7bbc1.html">
+                        <div class="card-image tag-image">
                             
-                            <img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/git.png" class="responsive-img" alt="Git下载和安装">
+                            <img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/KNN.png" class="responsive-img" alt="K近邻算法详解以及实现代码">
                             
-                            <span class="card-title">Git下载和安装</span>
+                            <span class="card-title">K近邻算法详解以及实现代码</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                Git下载和安装
+                                KNN详解，python代码实现k近邻算法
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-25
                             </span>
                             <span class="publish-author">
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/Git/" class="post-category">
-                                    Git
+                                <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    机器学习
                                 </a>
                                 
                                 
@@ -446,417 +695,8 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/Git%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85/">
-                            <span class="chip bg-color">Git下载和安装</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/7ee53739.html">
-                        <div class="card-image">
-                            
-                            <img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/git.png" class="responsive-img" alt="集中式和分布式">
-                            
-                            <span class="card-title">集中式和分布式</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                集中式和分布式的讲解
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-24
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Git/" class="post-category">
-                                    Git
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E9%9B%86%E4%B8%AD%E5%BC%8F%E5%92%8C%E5%88%86%E5%B8%83%E5%BC%8F%E5%BC%80%E5%8F%91/">
-                            <span class="chip bg-color">集中式和分布式开发</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/6814ac35.html">
-                        <div class="card-image">
-                            
-                            <img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/git.png" class="responsive-img" alt="Git_简介">
-                            
-                            <span class="card-title">Git_简介</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Git的简介
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-24
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Git/" class="post-category">
-                                    Git
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Git%E7%AE%80%E4%BB%8B/">
-                            <span class="chip bg-color">Git简介</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/75f55e54.html">
-                        <div class="card-image">
-                            
-                            <img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/20191228095545228.png" class="responsive-img" alt="PyCharm永久破解方法">
-                            
-                            <span class="card-title">PyCharm永久破解方法</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                PyCharm永久破解方法
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-20
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E8%BD%AF%E4%BB%B6%E7%A0%B4%E8%A7%A3/" class="post-category">
-                                    软件破解
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/PyCharm%E6%B0%B8%E4%B9%85%E7%A0%B4%E8%A7%A3%E6%96%B9%E6%B3%95/">
-                            <span class="chip bg-color">PyCharm永久破解方法</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/ff8068c0.html">
-                        <div class="card-image">
-                            
-                            <img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg/source/20190331172055940.jpg" class="responsive-img" alt="快速排序算法">
-                            
-                            <span class="card-title">快速排序算法</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                python快速排序算法基本思想和实现代码的讲解
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-19
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/python%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">python算法</span>
-                        </a>
-                        
-                        <a href="/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                            <span class="chip bg-color">python数据结构</span>
-                        </a>
-                        
-                        <a href="/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">快速排序算法</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/96555fb2.html">
-                        <div class="card-image">
-                            
-                            <img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/bVbswgT" class="responsive-img" alt="插入排序算法">
-                            
-                            <span class="card-title">插入排序算法</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                python插入排序算法和实现代码的最形象讲解
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-12
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/python%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">python算法</span>
-                        </a>
-                        
-                        <a href="/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                            <span class="chip bg-color">python数据结构</span>
-                        </a>
-                        
-                        <a href="/tags/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">插入排序算法</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/43d00a99.html">
-                        <div class="card-image">
-                            
-                            <img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/bVbswmI" class="responsive-img" alt="选择排序算法">
-                            
-                            <span class="card-title">选择排序算法</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                python选择排序算法和实现代码的最形象讲解
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-11
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">选择排序算法</span>
-                        </a>
-                        
-                        <a href="/tags/python%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">python算法</span>
-                        </a>
-                        
-                        <a href="/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                            <span class="chip bg-color">python数据结构</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/4d081371.html">
-                        <div class="card-image">
-                            
-                            <img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.png" class="responsive-img" alt="冒泡排序算法">
-                            
-                            <span class="card-title">冒泡排序算法</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                python冒泡排序算法基本思想和实现代码的最形象讲解
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-10
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/python%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">python算法</span>
-                        </a>
-                        
-                        <a href="/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                            <span class="chip bg-color">python数据结构</span>
-                        </a>
-                        
-                        <a href="/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">冒泡排序算法</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/56739dcf.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="缓存的穿透、击穿、雪崩">
-                            
-                            <span class="card-title">缓存的穿透、击穿、雪崩</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                缓存穿透、缓存击穿、缓存雪崩区别和解决办法
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-09
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E7%BC%93%E5%AD%98%E9%97%AE%E9%A2%98/" class="post-category">
-                                    缓存问题
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9/">
-                            <span class="chip bg-color">缓存雪崩</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F/">
-                            <span class="chip bg-color">缓存穿透</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%BC%93%E5%AD%98%E5%87%BB%E7%A9%BF/">
-                            <span class="chip bg-color">缓存击穿</span>
+                        <a href="/tags/KNN/">
+                            <span class="chip bg-color">KNN</span>
                         </a>
                         
                     </div>
@@ -866,32 +706,7 @@
             
         </div>
     </article>
-
 </main>
-
-
-<div class="container paging">
-    <div class="row">
-        <div class="col s6 m4 l4">
-            
-            <a href="/"
-               class="left btn-floating btn-large waves-effect waves-light bg-color">
-                <i class="fas fa-angle-left"></i>
-            </a>
-            
-        </div>
-        <div class="page-info col m4 l4 hide-on-small-only">
-            <div class="center-align b-text-gray">2 / 2</div>
-        </div>
-        <div class="col s6 m4 l4">
-            
-            <a class="right btn-floating btn-large disabled">
-                <i class="fas fa-angle-right"></i>
-            </a>
-            
-        </div>
-    </div>
-</div>
 
 
 

@@ -6,7 +6,7 @@
   <link href="https://www.bulingling.top/atom.xml" rel="self"/>
   
   <link href="https://www.bulingling.top/"/>
-  <updated>2021-03-05T13:38:36.967Z</updated>
+  <updated>2021-03-30T13:31:14.620Z</updated>
   <id>https://www.bulingling.top/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>tableau_cracker</title>
+    <title>K近邻算法详解以及实现代码</title>
+    <link href="https://www.bulingling.top/posts/bea7bbc1.html"/>
+    <id>https://www.bulingling.top/posts/bea7bbc1.html</id>
+    <published>2021-03-25T13:18:09.000Z</published>
+    <updated>2021-03-30T13:31:14.620Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2&gt;&lt;span id=&quot;概述&quot;&gt;概述&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;​        K-近邻算法(&lt;code&gt;K-Nearest Neighbour</summary>
+        
+      
+    
+    
+    
+    <category term="机器学习" scheme="https://www.bulingling.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="KNN" scheme="https://www.bulingling.top/tags/KNN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>tableau破解</title>
     <link href="https://www.bulingling.top/posts/b334f9be.html"/>
     <id>https://www.bulingling.top/posts/b334f9be.html</id>
     <published>2021-03-05T12:46:37.000Z</published>
-    <updated>2021-03-05T13:38:36.967Z</updated>
+    <updated>2021-03-18T11:42:34.200Z</updated>
     
     
       
@@ -528,35 +553,6 @@
     <category term="python数据结构" scheme="https://www.bulingling.top/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     <category term="冒泡排序算法" scheme="https://www.bulingling.top/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>缓存的穿透、击穿、雪崩</title>
-    <link href="https://www.bulingling.top/posts/56739dcf.html"/>
-    <id>https://www.bulingling.top/posts/56739dcf.html</id>
-    <published>2021-02-09T12:48:42.000Z</published>
-    <updated>2021-02-23T03:18:10.014Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2&gt;&lt;span id=&quot;一-缓存处理的过程&quot;&gt;一 .  缓存处理的过程&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;​   </summary>
-        
-      
-    
-    
-    
-    <category term="缓存问题" scheme="https://www.bulingling.top/categories/%E7%BC%93%E5%AD%98%E9%97%AE%E9%A2%98/"/>
-    
-    
-    <category term="缓存雪崩" scheme="https://www.bulingling.top/tags/%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9/"/>
-    
-    <category term="缓存穿透" scheme="https://www.bulingling.top/tags/%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F/"/>
-    
-    <category term="缓存击穿" scheme="https://www.bulingling.top/tags/%E7%BC%93%E5%AD%98%E5%87%BB%E7%A9%BF/"/>
     
   </entry>
   
