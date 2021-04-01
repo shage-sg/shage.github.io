@@ -4,6 +4,32 @@
   
     
     <entry>
+      <title></title>
+      <link href="posts/0.html"/>
+      <url>posts/0.html</url>
+      
+        <content type="html"><![CDATA[{"title":"K近邻算法详解以及实现代码","id":"posts/bea7bbc1.html","date_published":"03/25/2021","summary":"","url":"https://www.bulingling.top/posts/bea7bbc1.html","tags":["KNN"],"categories":["机器学习"]}]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="posts/0.html"/>
+      <url>posts/0.html</url>
+      
+        <content type="html"><![CDATA[importScripts('https://cdn.webpushr.com/sw-server.min.js');]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>K近邻算法详解以及实现代码</title>
       <link href="posts/bea7bbc1.html"/>
       <url>posts/bea7bbc1.html</url>
@@ -453,11 +479,11 @@
       
         <tags>
             
+            <tag> 插入排序算法 </tag>
+            
             <tag> python算法 </tag>
             
             <tag> python数据结构 </tag>
-            
-            <tag> 插入排序算法 </tag>
             
         </tags>
       
@@ -482,11 +508,11 @@
       
         <tags>
             
-            <tag> 选择排序算法 </tag>
-            
             <tag> python算法 </tag>
             
             <tag> python数据结构 </tag>
+            
+            <tag> 选择排序算法 </tag>
             
         </tags>
       
