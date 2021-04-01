@@ -4,26 +4,25 @@
   
     
     <entry>
-      <title></title>
-      <link href="posts/0.html"/>
-      <url>posts/0.html</url>
+      <title>vcvarsall.bat问题</title>
+      <link href="posts/e6b1f709.html"/>
+      <url>posts/e6b1f709.html</url>
       
-        <content type="html"><![CDATA[{"title":"K近邻算法详解以及实现代码","id":"posts/bea7bbc1.html","date_published":"03/25/2021","summary":"","url":"https://www.bulingling.top/posts/bea7bbc1.html","tags":["KNN"],"categories":["机器学习"]}]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="posts/0.html"/>
-      <url>posts/0.html</url>
-      
-        <content type="html"><![CDATA[importScripts('https://cdn.webpushr.com/sw-server.min.js');]]></content>
+        <content type="html"><![CDATA[<h2><span id="unable-to-find-vcvarsallbat问题">Unable to find vcvarsall.bat问题</span></h2><p>今天在编译Cython的代码时，运行python setup.py build_ext –inplace时，出现如标题所示错误，解决方法如下：</p><p>Python开发者基本都会遇到这个问题，而我也是问题解决之后没有记录，再次遇到问题时去重新搜索，浪费了大量时间。</p><p>终极解决方法就是安装微软官方的 Visual Studio <a href="https://link.zhihu.com/?target=https://visualstudio.microsoft.com/zh-hans/vs/">Visual Studio 2019</a>，把 Windows SDK， Visual C++ 相关的组建都安装上，当然会消耗较多的磁盘空间。</p><p>当然，Python3.5 及以上的版本（现在大家用的都是3.5以后的），也可以安装<a href="https://link.zhihu.com/?target=https://visualstudio.com/">Visual Studio 2017</a>，选择Python开发工作负载和本机开发工具选项，也可以安装 Visual Studio 2015，也可以安装<a href="https://link.zhihu.com/?target=https://download.microsoft.com/download/5/f/7/5f7acaeb-8363-451f-9425-68a90f98b238/visualcppbuildtools_full.exe">Visual C ++生成工具2015</a>，本人选择的<a href="https://link.zhihu.com/?target=http://go.microsoft.com/fwlink/?LinkId=691126">Visual C ++生成工具2015</a>，约占用磁盘 3GB。</p><p>如果是 Python3.5 以下的版本，你可以参考下面这篇文章「<a href="https://link.zhihu.com/?target=https://devblogs.microsoft.com/python/unable-to-find-vcvarsall-bat/">如何处理“无法找到vcvarsall.bat”的痛苦</a>」，非常靠谱。</p><p>下图是安装<a href="https://link.zhihu.com/?target=http://go.microsoft.com/fwlink/?LinkId=691126">Visual C ++生成工具2015</a>之后的情况：</p><p><img src="https://cdn.jsdelivr.net/gh/shage-sg/cloudimg@master/source/2021_4_1_12_30.png" alt="Visual C++生成工具2015"></p>]]></content>
       
       
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Cython </tag>
+            
+        </tags>
       
     </entry>
     
@@ -479,11 +478,11 @@
       
         <tags>
             
-            <tag> 插入排序算法 </tag>
-            
             <tag> python算法 </tag>
             
             <tag> python数据结构 </tag>
+            
+            <tag> 插入排序算法 </tag>
             
         </tags>
       
@@ -508,11 +507,11 @@
       
         <tags>
             
+            <tag> 选择排序算法 </tag>
+            
             <tag> python算法 </tag>
             
             <tag> python数据结构 </tag>
-            
-            <tag> 选择排序算法 </tag>
             
         </tags>
       
