@@ -6,7 +6,7 @@
   <link href="https://www.bulingling.top/atom.xml" rel="self"/>
   
   <link href="https://www.bulingling.top/"/>
-  <updated>2021-04-03T14:22:33.734Z</updated>
+  <updated>2021-04-04T07:39:41.687Z</updated>
   <id>https://www.bulingling.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>缓存机制</title>
+    <link href="https://www.bulingling.top/posts/7d4e77c5.html"/>
+    <id>https://www.bulingling.top/posts/7d4e77c5.html</id>
+    <published>2021-04-04T06:31:45.000Z</published>
+    <updated>2021-04-04T07:39:41.687Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;缓存机制&quot;&gt;缓存机制&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;​   </summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="https://www.bulingling.top/categories/python/"/>
+    
+    
+    <category term="缓存机制" scheme="https://www.bulingling.top/tags/%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>垃圾回收机制</title>
@@ -513,37 +538,6 @@
     <category term="python数据结构" scheme="https://www.bulingling.top/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     <category term="快速排序算法" scheme="https://www.bulingling.top/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>插入排序算法</title>
-    <link href="https://www.bulingling.top/posts/96555fb2.html"/>
-    <id>https://www.bulingling.top/posts/96555fb2.html</id>
-    <published>2021-02-12T12:35:25.000Z</published>
-    <updated>2021-02-20T06:48:21.493Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;center&gt; 在这里bobo祝大家新年快乐！！&lt;/center&gt;
-
-&lt;h1&gt;&lt;span id=&quot;python插入排序算法&quot;&gt;Python插入排序算法&lt;/span&gt;&lt;/h1&gt;&lt;h2&gt;&lt;span id=&quot;一-插入排序算法的基本思想&quot;&gt;一 .</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://www.bulingling.top/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="python算法" scheme="https://www.bulingling.top/tags/python%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="python数据结构" scheme="https://www.bulingling.top/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    <category term="插入排序算法" scheme="https://www.bulingling.top/tags/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
