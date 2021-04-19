@@ -263,14 +263,14 @@
   </url>
   
   <url>
-    <loc>https://www.bulingling.top/tags/Git%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/</loc>
+    <loc>https://www.bulingling.top/tags/Git%E5%A4%9A%E5%8D%8F%E8%AE%AE%E6%96%B9%E5%BC%8F/</loc>
     <lastmod>2021-04-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.bulingling.top/tags/Git%E5%A4%9A%E5%8D%8F%E8%AE%AE%E6%96%B9%E5%BC%8F/</loc>
+    <loc>https://www.bulingling.top/tags/Git%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/</loc>
     <lastmod>2021-04-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -347,6 +347,13 @@
   </url>
   
   <url>
+    <loc>https://www.bulingling.top/tags/PyCharm%E6%B0%B8%E4%B9%85%E7%A0%B4%E8%A7%A3%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2021-04-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.bulingling.top/tags/pathlib%E5%BA%93/</loc>
     <lastmod>2021-04-19</lastmod>
     <changefreq>daily</changefreq>
@@ -355,13 +362,6 @@
   
   <url>
     <loc>https://www.bulingling.top/tags/Path/</loc>
-    <lastmod>2021-04-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.bulingling.top/tags/PyCharm%E6%B0%B8%E4%B9%85%E7%A0%B4%E8%A7%A3%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2021-04-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -496,14 +496,14 @@
   </url>
   
   <url>
-    <loc>https://www.bulingling.top/categories/python/</loc>
+    <loc>https://www.bulingling.top/categories/%E8%BD%AF%E4%BB%B6%E7%A0%B4%E8%A7%A3/</loc>
     <lastmod>2021-04-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.bulingling.top/categories/%E8%BD%AF%E4%BB%B6%E7%A0%B4%E8%A7%A3/</loc>
+    <loc>https://www.bulingling.top/categories/python/</loc>
     <lastmod>2021-04-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
