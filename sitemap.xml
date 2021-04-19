@@ -249,14 +249,14 @@
 
   
   <url>
-    <loc>https://www.bulingling.top/tags/Git%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85/</loc>
+    <loc>https://www.bulingling.top/tags/Git%E7%AE%80%E4%BB%8B/</loc>
     <lastmod>2021-04-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.bulingling.top/tags/Git%E7%AE%80%E4%BB%8B/</loc>
+    <loc>https://www.bulingling.top/tags/Git%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2021-04-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -291,7 +291,7 @@
   </url>
   
   <url>
-    <loc>https://www.bulingling.top/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://www.bulingling.top/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2021-04-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -306,6 +306,13 @@
   
   <url>
     <loc>https://www.bulingling.top/tags/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <lastmod>2021-04-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.bulingling.top/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2021-04-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -333,21 +340,7 @@
   </url>
   
   <url>
-    <loc>https://www.bulingling.top/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2021-04-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.bulingling.top/tags/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2021-04-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.bulingling.top/tags/PyCharm%E6%B0%B8%E4%B9%85%E7%A0%B4%E8%A7%A3%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2021-04-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -368,6 +361,13 @@
   </url>
   
   <url>
+    <loc>https://www.bulingling.top/tags/PyCharm%E6%B0%B8%E4%B9%85%E7%A0%B4%E8%A7%A3%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2021-04-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.bulingling.top/tags/python%E7%BC%96%E8%AF%91exe%E6%96%87%E4%BB%B6/</loc>
     <lastmod>2021-04-19</lastmod>
     <changefreq>daily</changefreq>
@@ -382,13 +382,6 @@
   </url>
   
   <url>
-    <loc>https://www.bulingling.top/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2021-04-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.bulingling.top/tags/tableau%E7%A0%B4%E8%A7%A3%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2021-04-19</lastmod>
     <changefreq>daily</changefreq>
@@ -396,7 +389,7 @@
   </url>
   
   <url>
-    <loc>https://www.bulingling.top/tags/python%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E4%B8%AD%E7%8B%AC%E7%AB%8B%E6%98%9F%E5%8F%B7-%E7%9A%84%E4%BD%9C%E7%94%A8/</loc>
+    <loc>https://www.bulingling.top/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2021-04-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -425,6 +418,13 @@
   
   <url>
     <loc>https://www.bulingling.top/tags/pandas%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2021-04-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.bulingling.top/tags/python%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E4%B8%AD%E7%8B%AC%E7%AB%8B%E6%98%9F%E5%8F%B7-%E7%9A%84%E4%BD%9C%E7%94%A8/</loc>
     <lastmod>2021-04-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -496,14 +496,14 @@
   </url>
   
   <url>
-    <loc>https://www.bulingling.top/categories/%E8%BD%AF%E4%BB%B6%E7%A0%B4%E8%A7%A3/</loc>
+    <loc>https://www.bulingling.top/categories/python/</loc>
     <lastmod>2021-04-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.bulingling.top/categories/python/</loc>
+    <loc>https://www.bulingling.top/categories/%E8%BD%AF%E4%BB%B6%E7%A0%B4%E8%A7%A3/</loc>
     <lastmod>2021-04-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
