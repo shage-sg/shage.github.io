@@ -455,7 +455,7 @@
             position: relative;
         }
     .box img {
-        width: 200px;
+        width: 300px;
         vertical-align: top;
         padding: 8px;
         border-radius: 10px;
@@ -596,13 +596,13 @@
 </section>
 <script>
     $(function () {
-        // 获取图片的宽度(400px)
-        let imgWidth = $('.mat').outerWidth(); // 400
+        // 获取图片的宽度(200px)
+        let imgWidth = $('.mat').outerWidth(); // 200
         waterfallHandler();
         // 瀑布流处理
         function waterfallHandler() {
             // 获取图片的列数
-            let column = parseInt($(window).width() / imgWidth);
+            let column = parseInt($(window).width()-300 / imgWidth);
             // 高度数组
             let heightArr = [];
             for(let i=0; i<column; i++) {
