@@ -602,7 +602,7 @@
         // 瀑布流处理
         function waterfallHandler() {
             // 获取图片的列数
-            let column = parseInt($(window).width() / imgWidth)-1;
+            let column = parseInt($(window).width() / imgWidth);
             // 高度数组
             let heightArr = [];
             for(let i=0; i<column; i++) {
