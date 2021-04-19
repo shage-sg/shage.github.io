@@ -478,7 +478,7 @@
         }   
     @media only screen and (max-width: 1058px) {
         .box {
-            margin-left: 0px;
+            margin-left: 145px;
         }
     }
     @media only screen and (max-width: 770px) {
@@ -602,7 +602,7 @@
         // 瀑布流处理
         function waterfallHandler() {
             // 获取图片的列数
-            let column = parseInt($(window).width() / imgWidth);
+            let column = parseInt($(window).width()-160 / imgWidth);
             // 高度数组
             let heightArr = [];
             for(let i=0; i<column; i++) {
