@@ -476,9 +476,9 @@
     .biaotiss {
             font-family: MV Boli;
         }   
-    @media only screen and (max-width: 1058px) {
+    @media only screen and (max-width: 1000px) {
         .box {
-            margin-left: 145px;
+            margin-left: 0px;
         }
     }
     @media only screen and (max-width: 770px) {
@@ -602,7 +602,7 @@
         // 瀑布流处理
         function waterfallHandler() {
             // 获取图片的列数
-            let column = parseInt($(window).width()-160 / imgWidth);
+            let column = parseInt($(window).width() / imgWidth);
             // 高度数组
             let heightArr = [];
             for(let i=0; i<column; i++) {
