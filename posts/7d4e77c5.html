@@ -528,7 +528,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-04
+                    2021-04-26
                 </div>
                 
 
@@ -582,25 +582,30 @@ v2 <span class="token operator">=</span> <span class="token number">8.888</span>
 <span class="token comment"># 注意：引用计数器为0时，会先判断free_list中缓存个数是否满了，未满则将对象缓存，已满则直接将对象销毁。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li><p>int类型，不是基于free_list，而是维护一个small_list链表保存常见数据（小数据池），小数据池的范围：<code>-5 &lt;= value &lt;257</code>。即：重复使用这个范围的整数时，不会开辟新的内存。</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">  <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h1><span id="去小数据池small_list中去获取38整数对象将对象添加到refchain环状双向链表里并让引用计数器1">去小数据池small_list中去获取38整数对象，将对象添加到refchain环状双向链表里并让引用计数器+1.</span></h1><p>v1 = 38<br>print(id(v1)) # 内存地址: 140726972168176</p>
-<h1><span id="去小数据池small_list中获取38整数对象将ref_chain中的对象引用计数器1">去小数据池small_list中获取38整数对象，将ref_chain中的对象引用计数器+1.</span></h1><p>v2 = 38<br>print(id(v2)) # 内存地址：140726972168176</p>
-<h1><span id="注意在解释器启动时候-5~256就已经被加入到small_ints链表中且引用计数器初始化为1代码中使用的值时直接去small_ints中拿来用并将引用计数器1即可-另外small_ints中的数据引用计数器永远不会为0初始化时就设置为1了所以也不会被销毁">注意：在解释器启动时候-5~256就已经被加入到small_ints链表中且引用计数器初始化为1，代码中使用的值时直接去small_ints中拿来用并将引用计数器+1即可。另外，small_ints中的数据引用计数器永远不会为0（初始化时就设置为1了），所以也不会被销毁。</span></h1><pre class="line-numbers language-none"><code class="language-none">
-  
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#去小数据池small_list中去获取38整数对象，将对象添加到refchain环状双向链表里并让引用计数器+1.</span>
+v1 <span class="token operator">=</span> <span class="token number">38</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>v1<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 内存地址: 140726972168176</span>
 
-- `str`类型，维护`unicode_latin1[256]`链表，内部将所有的`ascii`缓存起来，以后使用时就不再反复创建。
+<span class="token comment"># 去小数据池small_list中获取38整数对象，将ref_chain中的对象引用计数器+1.</span>
+v2 <span class="token operator">=</span> <span class="token number">38</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>v2<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 内存地址：140726972168176</span>
+<span class="token comment">#注意：在解释器启动时候-5~256就已经被加入到small_ints链表中且引用计数器初始化为1，代码中使用的值时直接去small_ints中拿来用并将引用计数器+1即可。另外，small_ints中的数据引用计数器永远不会为0（初始化时就设置为1了），所以也不会被销毁。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-​```python
-v1 = "A"
-print(id(v1)) # 内存地址：2366548050416
-del v1
-v1 = "A"
-print(id(v1)) # 内存地址：2366548050416
 
- # 除此之外，Python内部还对字符串做了驻留机制，针对那么只含有字母、数字、下划线的字符串（见源码Objects/codeobject.c），如果内存中已存在则不会重新在创建而是使用原来的地址里（不会像free_list那样一直在内存存活，只有内存中有才能被重复利用）。
-  v1 = "bob"
-  v2 = "bobo"
-  print(id(v1) == id(v2)) # 输出：True<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<ul>
+<li><p><code>str</code>类型，维护<code>unicode_latin1[256]</code>链表，内部将所有的<code>ascii</code>缓存起来，以后使用时就不再反复创建。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">v1 <span class="token operator">=</span> <span class="token string">"A"</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>v1<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 内存地址：2366548050416</span>
+<span class="token keyword">del</span> v1
+v1 <span class="token operator">=</span> <span class="token string">"A"</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>v1<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 内存地址：2366548050416</span>
+
+ <span class="token comment"># 除此之外，Python内部还对字符串做了驻留机制，针对那么只含有字母、数字、下划线的字符串（见源码Objects/codeobject.c），如果内存中已存在则不会重新在创建而是使用原来的地址里（不会像free_list那样一直在内存存活，只有内存中有才能被重复利用）。</span>
+  v1 <span class="token operator">=</span> <span class="token string">"bob"</span>
+  v2 <span class="token operator">=</span> <span class="token string">"bobo"</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>v1<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">id</span><span class="token punctuation">(</span>v2<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 输出：True</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 </li>
